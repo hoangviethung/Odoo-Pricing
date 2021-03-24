@@ -1,0 +1,33 @@
+$hvh-primary-color: #ffc513;
+$hvh-secondary-color: #111111;
+$hvh-light-color: #faf9fa;
+$hvh-body-text-color: #2d2d2d;
+$hvh-white-color: #ffffff;
+$hvh-black-color: #000000;
+$hvh-gray-color: #dedede;
+$hvh-gray-border-color: #dedede;
+$hvh-warning-color: #ffc107;
+$hvh-danger-color: #f63030;
+$hvh-success-color: #00b359;
+$hvh-font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+	'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+	'Segoe UI Symbol';
+$hvh-font-icons: 'Font Awesome 5 Pro';
+
+:root {
+	--hvh-primary: #{$hvh-primary-color};
+	--hvh-secondary: #{$hvh-secondary-color};
+	--hvh-light: #{$hvh-light-color};
+	--hvh-body-text: #{$hvh-body-text-color};
+	--hvh-white: #{$hvh-white-color};
+	--hvh-black: #{$hvh-black-color};
+	--hvh-gray: #{$hvh-gray-color};
+	--hvh-border: #{$hvh-gray-border-color};
+	--hvh-warning: #{$hvh-warning-color};
+	--hvh-danger: #{$hvh-danger-color};
+	--hvh-success: #{$hvh-success-color};
+	--hvh-font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol';
+	--hvh-font-icons: 'Font Awesome 5 Pro';
+}

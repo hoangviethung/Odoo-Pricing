@@ -1,0 +1,16 @@
+{
+	"css": [
+		"node_modules/swiper/swiper-bundle.css",
+		"node_modules/wowjs/css/libs/animate.css",
+		"node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"
+	],
+	"js": [
+		"node_modules/jquery/dist/jquery.js",
+		"node_modules/swiper/swiper-bundle.js",
+		"node_modules/wowjs/dist/wow.js",
+		"node_modules/lazysizes/lazysizes.js",
+		"node_modules/masonry-layout/dist/masonry.pkgd.js",
+		"node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js"
+	],
+	"fonts": []
+}

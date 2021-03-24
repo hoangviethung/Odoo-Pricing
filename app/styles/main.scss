@@ -1,0 +1,14 @@
+@import '_abstracts/variables';
+@import '_abstracts/fonts';
+@import '_abstracts/font-awesome';
+
+@import '_globals/reboot';
+@import '_globals/grid';
+@import '_globals/layouts';
+@import '_globals/atomic';
+@import '_globals/utilities';
+
+@import '_components/tabs';
+@import '_components/pagination';
+
+@import '_pages/index';
