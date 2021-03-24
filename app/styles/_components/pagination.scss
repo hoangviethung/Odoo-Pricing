@@ -1,5 +1,5 @@
 .pagination {
-	background: $hvh-white-color;
+	background: $hvh-neutral-white-color;
 	display: flex;
 	justify-content: flex-end;
 	padding: 3rem 0;
@@ -21,15 +21,15 @@
 			width: 3rem;
 			border-radius: 0.5rem;
 			font-size: 1.2rem;
-			background: $hvh-white-color;
-			border: 0.1rem solid $hvh-gray-border-color;
+			background: $hvh-neutral-white-color;
+			border: 0.1rem solid $hvh-neutral-lighter-border-color;
 			transition: all 0.2s cubic-bezier(0.2, 0.5, 0.5, 0.8);
 		}
 
 		&:hover {
 			a {
-				color: $hvh-white-color;
-				background: $hvh-secondary-color;
+				color: $hvh-neutral-white-color;
+				background: $hvh-neutral-darker-color;
 			}
 		}
 
@@ -39,7 +39,7 @@
 
 		&.active {
 			a {
-				color: $hvh-secondary-color;
+				color: $hvh-neutral-darker-color;
 				background: $hvh-primary-color;
 				text-decoration: underline;
 			}

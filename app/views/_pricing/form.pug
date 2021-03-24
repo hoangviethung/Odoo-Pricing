@@ -1,0 +1,96 @@
+// *** FORM PRICING *** //
+.hvh-pricing-form
+	.hvh-pricing-step
+		.hvh-pricing-step-head
+			h3 Chọn số lượng 
+				b người dùng
+		.hvh-pricing-step-body
+			input.form-control.hvh-pricing-users(type="number" min="1" value="1")
+			label.bg-gray.border Người sử dụng
+			label
+				del
+					span.hvh-pricing-user-amount-yearly-full $8.00
+					span.hvh-pricing-currency USD
+				b.hvh-pricing-user-pricing-yearly
+					span.hvh-pricing-user-amount-yearly $6.00
+					span.hvh-pricing-currency USD
+					small /người dùng/tháng
+	.hvh-pricing-step
+		.hvh-pricing-step-head
+			h3 Chọn ứng dụng của bạn
+		.hvh-pricing-step-body
+			.form-row
+				-for(i=1;i<20;i++)
+					.col-12.col-sm-6.col-lg-4
+						label.app-item
+							.hvh-pricing-app-icon
+								img.lazyload.blur-up(src="./images/icons/icon-module.svg", alt="CRM - Quản lý quan hệ khách hàng")
+							.hvh-pricing-app-name
+								.hvh-pricing-app-real-name.lcl.lcl-1 CRM - Quản lý quan hệ khách hàng
+								.hvh-pricing-app-price
+									b
+										span.amount_to_localize $8.00 
+										span.hvh-pricing-currency USD
+									| /tháng
+							.hvh-form-checkbox-module
+								input.hvh-pricing-app-checkbox(type="checkbox")
+	.hvh-pricing-step
+		.hvh-pricing-step-head
+			h3 Tích hợp thêm
+		.hvh-pricing-step-body
+			.form-row
+				-for(i=1;i<6;i++)
+					.col-12.col-sm-6.col-lg-4
+						label.app-item
+							.hvh-pricing-app-icon
+								img.lazyload.blur-up(src="./images/icons/icon-module.svg", alt="CRM - Quản lý quan hệ khách hàng")
+							.hvh-pricing-app-name
+								.hvh-pricing-app-real-name.lcl.lcl-1 CRM - Quản lý quan hệ khách hàng
+								.hvh-pricing-app-price
+									b
+										span.amount_to_localize $8.00 
+										span.hvh-pricing-currency USD
+									| /tháng
+							.hvh-form-checkbox-module
+								input.hvh-pricing-app-checkbox(type="checkbox")
+	.hvh-pricing-step
+		.hvh-pricing-step-head
+			h3 Chọn loại lưu trữ của bạn
+		.hvh-pricing-step-body
+			.hvh-pricing-hosting
+				ul.hvh-pricing-hosting-list
+						li.hvh-pricing-hosting-item
+							label
+								input(type="radio" name="hosting")
+								span Lưu trữ đám mây*
+						li.hvh-pricing-hosting-item
+							label
+								input(type="radio" name="hosting")
+								span On-premise
+						li.hvh-pricing-hosting-item
+							label
+								input(type="radio" name="hosting")
+								span Nền tảng điện toán đám mây Bemo.sh
+								small
+									a(href="" target="_blank") (Thông tin thêm và Odoo.sh)
+	.hvh-pricing-step
+		.hvh-pricing-step-head
+			h3 Dịch vụ thực hiện
+		.hvh-pricing-step-body
+			.hvh-pricing-hosting
+				ul.hvh-pricing-hosting-list
+						li.hvh-pricing-hosting-item
+							label
+								input(type="radio" name="implementation_service")
+								span Tự triển khai hệ thống
+						li.hvh-pricing-hosting-item
+							label
+								input(type="radio" name="implementation_service")
+								span On-premise
+						li.hvh-pricing-hosting-item
+							label
+								input(type="radio" name="implementation_service")
+								span Với một đối tác địa phương 
+								small (được đề nghị cho 
+									b >50 người dùng
+									| )

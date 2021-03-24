@@ -4,11 +4,14 @@
 
 @import '_globals/reboot';
 @import '_globals/grid';
+@import '_globals/form';
 @import '_globals/layouts';
 @import '_globals/atomic';
 @import '_globals/utilities';
 
 @import '_components/tabs';
 @import '_components/pagination';
+@import '_components/banner-title-page';
 
 @import '_pages/index';
+@import '_pages/pricing';

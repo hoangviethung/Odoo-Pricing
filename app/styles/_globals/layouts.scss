@@ -1,0 +1,90 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba($color: $hvh-neutral-black-color, $alpha: 0.1);
+	z-index: 999;
+	transition: 0.3s all ease-in-out;
+	&.hvh-scrolled {
+		background: $hvh-neutral-white-color;
+		box-shadow: $hvh-box-shadow;
+		.hvh-logo-main-header {
+			img {
+				&.blur-up.lazyloaded {
+					filter: blur(0);
+				}
+			}
+		}
+		.hvh-header-buttons {
+			.btn {
+				&:not(.btn-secondary) {
+					color: $hvh-neutral-darker-color;
+				}
+			}
+		}
+		.hvh-primary-nav {
+			ul {
+				color: $hvh-neutral-darker-color;
+			}
+		}
+	}
+}
+
+.hvh-main-header {
+	height: $hvh-height-main-header;
+}
+
+.hvh-logo-main-header {
+	display: inline-flex;
+	height: 100%;
+	float: left;
+	img {
+		height: 36px;
+		width: auto;
+		margin: auto 0;
+		&.blur-up.lazyloaded {
+			filter: blur(0) brightness(0) invert(1);
+		}
+	}
+}
+
+.hvh-header-buttons {
+	float: right;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	.btn {
+		color: $hvh-neutral-white-color;
+		+ .btn {
+			margin-left: 16px;
+		}
+	}
+}
+
+.hvh-primary-nav {
+	height: 100%;
+	ul {
+		color: $hvh-neutral-white-color;
+		height: 100%;
+		text-align: center;
+		li {
+			display: inline-block;
+			margin: 0 24px;
+			> a {
+				line-height: $hvh-height-main-header;
+				&:not(.btn) {
+					color: inherit;
+					font-weight: 600;
+				}
+			}
+			&.has-sub {
+				&:after {
+					content: '\f078';
+					font-family: $hvh-font-icons;
+					margin-left: 8px;
+				}
+			}
+		}
+	}
+}

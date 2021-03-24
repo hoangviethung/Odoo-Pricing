@@ -1,0 +1,99 @@
+// *** PRICING BOARD *** //
+.hvh-pricing-board
+	.board-header.tab-container
+		ul.tab__list
+			li.item(toggle-for="tab-pane-yearly") Hằng năm
+			li.item(toggle-for="tab-pane-monthly") Hằng tháng
+		.tab__content
+			.content(tab-id="tab-pane-yearly")
+				table#o_yearly_table
+					tbody
+						tr
+							td
+								b
+									span.hvh-pricing-pricing_users_num 400
+								a(href="#") Người sử dụng
+							td
+								b.hvh-pricing-users-price-yearly $8,000
+								span.hvh-pricing-users-price-currency USD
+						tr
+							td
+								span Giảm giá cho người dùng 
+									sup (1)
+							td
+								b.hvh-pricing-users-price-discount-yearly -$2,000,002.00
+								span.hvh-pricing-users-price-currency USD
+						tr
+							td
+								b
+									span.hvh-pricing-apps-num 7
+									a(href="#") Ứng dụng
+							td
+								b.hvh-pricing-apps-price-yearly $40.00 
+								span.hvh-pricing-users-price-currency USD
+						tr
+							td
+								b Tổng
+								| / tháng
+								sup (2)
+							td
+								b.hvh-pricing-price-yearly $6,000,046.00 
+								span.hvh-pricing-users-price-currency USD
+				.hvh-pricing-price-yearly-in-year-wrapper
+					span
+						sup (2)
+						| Thanh toán hằng năm: 
+					b.hvh-pricing-price-yearly-in-year $72,000,552.00 
+					span.hvh-pricing-users-price-currency USD
+				.hvh-pricing-price-is-not-free-trial
+					.hvh-pricing-form-button
+						a.btn.btn-primary.btn-lg.btn-full(href="#") DÙNG THỬ NGAY
+							span 15 ngày dùng thử miễn phí
+						a.btn.btn-positive.btn-lg.btn-full(href="#") MUA NGAY
+						.alert-danger.hvh-pricing-error-no-apps
+							p Vui lòng chọn ít nhất một Ứng dụng.
+				.hvh-pricing-price-is-free-trial
+					p Những ứng dụng này 
+						b miễn phí
+						| miễn là bạn không cần thêm ứng dụng hoặc tùy chọn lưu trữ.
+					.hvh-pricing-form-button
+						a.btn.btn-primary.btn-lg.btn-full(href="#") BẮT ĐẦU NGAY
+				.hvh-pricing-price-monthly-not_allowed.alert-danger
+					p Kế hoạch hàng tháng sẽ chỉ hiện hoạt cho các lựa chọn thuê dịch vụ lưu trữ trên điện toán đám máy (tiêu chuẩn hoặc Odoo.sh)
+				i.hvh-pricing-board-note
+					sup (1)
+					span Khách hàng mới được giảm giá trên số lượng người dùng ban đầu đã đặt.
+			.content(tab-id="tab-pane-monthly")
+				table#o_monthly_table
+					tbody
+						tr
+							td
+								b
+									span.hvh-pricing-pricing_users_num 1000
+								a(href="#") Người sử dụng
+							td
+								b.hvh-pricing-users-price-yearly $29,000
+								span.hvh-pricing-users-price-currency USD
+						tr
+							td
+								span Giảm giá cho người dùng 
+									sup (1)
+							td
+								b.hvh-pricing-users-price-discount-yearly -$2,000,002.00
+								span.hvh-pricing-users-price-currency USD
+						tr
+							td
+								b
+									span.hvh-pricing-apps-num 10
+									a(href="#") Ứng dụng
+							td
+								b.hvh-pricing-apps-price-yearly $55.00 
+								span.hvh-pricing-users-price-currency USD
+						tr
+							td
+								b Tổng
+								| / tháng
+								sup (2)
+							td
+								b.hvh-pricing-price-yearly $6,000,046.00 
+								span.hvh-pricing-users-price-currency USD

@@ -157,3 +157,9 @@
 	@extend .mt-section;
 	@extend .mb-section;
 }
+
+.text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

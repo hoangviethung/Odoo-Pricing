@@ -1,0 +1,28 @@
+.banner-title-page {
+	position: relative;
+	min-height: 30vh;
+	background: $hvh-primary-color;
+	padding-top: $hvh-height-main-header;
+	background: linear-gradient(
+		150deg,
+		$hvh-primary-color 20%,
+		$hvh-primary-blue-medium-color-01 80%
+	);
+	h1 {
+		color: $hvh-neutral-white-color;
+		font-size: 4.2rem;
+		margin: 5rem 0;
+		text-align: center;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-image: url(../images/inner-banner-title-page.png);
+		background-position: 0% 100%;
+		background-size: cover;
+	}
+}

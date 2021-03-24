@@ -1,31 +1,90 @@
-$hvh-primary-color: #ffc513;
-$hvh-secondary-color: #111111;
-$hvh-light-color: #faf9fa;
-$hvh-body-text-color: #2d2d2d;
-$hvh-white-color: #ffffff;
-$hvh-black-color: #000000;
-$hvh-gray-color: #dedede;
-$hvh-gray-border-color: #dedede;
-$hvh-warning-color: #ffc107;
-$hvh-danger-color: #f63030;
-$hvh-success-color: #00b359;
 $hvh-font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 	'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
 	'Segoe UI Symbol';
 $hvh-font-icons: 'Font Awesome 5 Pro';
 
+// Layout
+$hvh-height-main-header: 56px;
+$hvh-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+
+//----------------------------------------------------------
+// Root Primary Colors
+//----------------------------------------------------------
+$hvh-primary-color: #0c3255;
+$hvh-primary-dark-color-01: #051423;
+$hvh-primary-dark-color-02: #081f36;
+$hvh-primary-blue-medium-color-01: #12497d;
+$hvh-primary-blue-medium-color-02: #175ea1;
+$hvh-primary-blue-medium-color-03: #1c73c4;
+$hvh-primary-blue-light-color-01: #2988e0;
+$hvh-primary-blue-light-color-02: #4c9ce6;
+$hvh-primary-blue-light-color-03: #70afeb;
+$hvh-primary-blue-light-color-04: #b8d7f5;
+$hvh-primary-blue-light-color-05: #dbebfa;
+$hvh-primary-blue-light-color-06: #f1f6f9;
+
+//----------------------------------------------------------
+// Root Primary Colors
+//----------------------------------------------------------
+$hvh-secondary-color: #00a09d;
+$hvh-secondary-dark-color-01: #007a77;
+$hvh-secondary-dark-color-02: #081f36;
+$hvh-secondary-blue-medium-color-01: #12497d;
+$hvh-secondary-blue-medium-color-02: #175ea1;
+$hvh-secondary-blue-medium-color-03: #1c73c4;
+$hvh-secondary-blue-light-color-01: #2988e0;
+$hvh-secondary-blue-light-color-02: #4c9ce6;
+$hvh-secondary-blue-light-color-03: #70afeb;
+$hvh-secondary-blue-light-color-04: #b8d7f5;
+$hvh-secondary-blue-light-color-05: #dbebfa;
+$hvh-secondary-blue-light-color-06: #f1f6f9;
+
+//----------------------------------------------------------
+// Root Semantic Information Colors
+//----------------------------------------------------------
+$hvh-semantic-information-color: #0e6eef;
+$hvh-semantic-information-light-color: #438eef;
+$hvh-semantic-information-lighter-color: #8ebbf5;
+$hvh-semantic-information-lightest-color: #ecf4fd;
+
+//----------------------------------------------------------
+// Root Semantic Positive Colors
+//----------------------------------------------------------
+$hvh-semantic-positive-color: #27ae60;
+$hvh-semantic-positive-light-color: #37d278;
+$hvh-semantic-positive-lighter-color: #8be5b0;
+$hvh-semantic-positive-lightest-color: #eefbf4;
+
+//----------------------------------------------------------
+// Root Semantic Critical Colors
+//----------------------------------------------------------
+$hvh-semantic-critical-color: #ffc52f;
+$hvh-semantic-critical-light-color: #f8ce62;
+$hvh-semantic-critical-lighter-color: #f8ce62;
+$hvh-semantic-critical-lightest-color: #fef9eb;
+
+//----------------------------------------------------------
+// Root Semantic Negative Colors
+//----------------------------------------------------------
+$hvh-semantic-negative-color: #eb5757;
+$hvh-semantic-negative-light-color: #ed6e6e;
+$hvh-semantic-negative-lighter-color: #f4a4a4;
+$hvh-semantic-negative-lightest-color: #fdeded;
+
+//----------------------------------------------------------
+// Root Neutral  Colors
+//----------------------------------------------------------
+$hvh-neutral-darkness-color: #141414;
+$hvh-neutral-darker-color: #373737;
+$hvh-neutral-dark-color: #474747;
+$hvh-neutral-medium-sub-color: #858585;
+$hvh-neutral-lightest-background-color: #f7f7f7;
+$hvh-neutral-lighter-border-color: #e0e0e0;
+$hvh-neutral-light-disable-color: #b8b8b8;
+$hvh-neutral-white-color: #ffffff;
+$hvh-neutral-black-color: #000000;
+
 :root {
-	--hvh-primary: #{$hvh-primary-color};
-	--hvh-secondary: #{$hvh-secondary-color};
-	--hvh-light: #{$hvh-light-color};
-	--hvh-body-text: #{$hvh-body-text-color};
-	--hvh-white: #{$hvh-white-color};
-	--hvh-black: #{$hvh-black-color};
-	--hvh-gray: #{$hvh-gray-color};
-	--hvh-border: #{$hvh-gray-border-color};
-	--hvh-warning: #{$hvh-warning-color};
-	--hvh-danger: #{$hvh-danger-color};
-	--hvh-success: #{$hvh-success-color};
 	--hvh-font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
 		'Segoe UI Emoji', 'Segoe UI Symbol';

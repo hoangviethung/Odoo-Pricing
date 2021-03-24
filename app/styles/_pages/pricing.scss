@@ -1,0 +1,185 @@
+.hvh-pricing {
+	padding: 1.5rem 0;
+	background: $hvh-primary-blue-light-color-06;
+}
+
+.hvh-pricing-form {
+	.hvh-pricing-step {
+		&:first-child {
+			margin-bottom: 5rem;
+		}
+	}
+	.hvh-pricing-step-head {
+		h3 {
+			font-size: 2.8rem;
+			margin: 16px 0 8px;
+		}
+	}
+	.hvh-pricing-step-body {
+		display: flex;
+		align-items: stretch;
+		.hvh-pricing-users {
+			~ label {
+				display: flex;
+				align-items: center;
+				font-weight: 700;
+				padding: 0 16px;
+				&.bg-gray {
+					background-color: $hvh-neutral-lightest-background-color;
+				}
+				&.border {
+					border: 1px solid $hvh-neutral-lighter-border-color;
+					border-left: 0;
+				}
+				del {
+					color: $hvh-neutral-medium-sub-color;
+				}
+				del,
+				span,
+				small {
+					margin: 0 2px;
+				}
+			}
+		}
+	}
+	.app-item {
+		cursor: pointer;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		padding: 8px;
+		background-color: $hvh-neutral-white-color;
+		border: 1px solid $hvh-neutral-lighter-border-color;
+		border-radius: 4px;
+		margin-bottom: 16px;
+		box-shadow: $hvh-box-shadow;
+	}
+	.hvh-pricing-app-name {
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-webkit-box-flex: 1;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		max-width: 100%;
+		padding-left: 8px;
+	}
+	.hvh-pricing-app-icon {
+		-ms-flex: 0 0 42px;
+		flex: 0 0 42px;
+		max-width: 42px;
+	}
+	.hvh-pricing-app-real-name {
+		font-weight: 700;
+	}
+	.hvh-pricing-app-price {
+		font-size: 0.85em;
+	}
+	.hvh-form-checkbox-module {
+		padding: 0 4px;
+	}
+	.hvh-pricing-hosting {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.hvh-pricing-hosting-list {
+		background: $hvh-neutral-white-color;
+		border-radius: 4px;
+		box-shadow: $hvh-box-shadow;
+		.hvh-pricing-hosting-item {
+			border-bottom: 1px solid $hvh-neutral-lighter-border-color;
+			transition: 0.3s all ease-in-out;
+			label {
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				padding: 16px 24px;
+				span {
+					margin-left: 8px;
+					font-weight: 700;
+				}
+			}
+			small {
+				margin-left: 16px;
+				> a {
+					color: $hvh-primary-color;
+					font-weight: 700;
+				}
+			}
+			&:hover {
+				background: $hvh-primary-blue-light-color-05;
+			}
+		}
+	}
+}
+
+.hvh-pricing-board {
+	position: sticky;
+	top: 0;
+	top: $hvh-height-main-header + 24px;
+	background: $hvh-neutral-white-color;
+	.tab__list {
+		display: flex;
+		flex-wrap: wrap;
+		.item {
+			font-weight: 700;
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+			padding: 8px 16px;
+			background: $hvh-primary-blue-light-color-05;
+			&.active {
+				background: $hvh-neutral-white-color;
+			}
+		}
+	}
+	.tab__content {
+		padding: 16px;
+		width: 100%;
+		table {
+			width: 100%;
+			td {
+				padding: 8px 0;
+				word-break: break-word;
+				border-bottom: 1px solid $hvh-neutral-lighter-border-color;
+			}
+			a {
+				display: inline-block;
+				font-weight: 600;
+				color: $hvh-primary-color;
+				margin: 0 2px;
+			}
+		}
+	}
+	.hvh-pricing-price-yearly-in-year-wrapper {
+		margin: 24px 0;
+		text-align: center;
+	}
+	.hvh-pricing-price-is-not-free-trial,
+	.hvh-pricing-price-is-free-trial {
+		margin-bottom: 16px;
+		p {
+			margin-bottom: 16px;
+		}
+		.hvh-pricing-form-button {
+			.btn {
+				flex-direction: column;
+				margin-bottom: 16px;
+				span {
+					margin-top: 8px;
+				}
+			}
+		}
+	}
+	.hvh-pricing-board-note {
+		margin-top: 16px;
+	}
+	.alert-danger {
+		padding: 16px;
+		background: $hvh-semantic-negative-lightest-color;
+		margin-bottom: 16px;
+		p {
+			color: $hvh-semantic-negative-color;
+		}
+	}
+}
