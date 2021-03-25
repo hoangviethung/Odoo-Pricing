@@ -18,8 +18,8 @@ html(lang="en")
 		// *** MAIN *** //
 		main
 			block main
-			// *** PAGE NAME *** //
-			#page-verify(data-class=`${bodyClass}`)
+			// *** PAGE VERIFY TEMPLATE *** //
+			input#page-verify-template(hidden current-page=`${bodyClass}` header-inverted=`${isHeaderInverted}`)
 		// *** OVERLAY *** //
 		#overlay
 		// *** FOOTER *** //

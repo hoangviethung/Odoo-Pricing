@@ -19,6 +19,7 @@
 		display: flex;
 		align-items: stretch;
 		.hvh-pricing-users {
+			max-width: 100px;
 			~ label {
 				display: flex;
 				align-items: center;

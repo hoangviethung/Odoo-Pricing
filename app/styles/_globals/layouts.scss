@@ -1,37 +1,62 @@
-header {
+.hvh-main-header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: rgba($color: $hvh-neutral-black-color, $alpha: 0.1);
+	color: $hvh-neutral-darker-color;
+	background-color: rgba($color: $hvh-neutral-white-color, $alpha: 0.1);
 	z-index: 999;
 	transition: 0.3s all ease-in-out;
+	.hvh-main-header-main {
+		a {
+			&:not(.btn) {
+				color: inherit;
+			}
+			&.btn {
+				&:not(.btn-secondary) {
+					color: inherit;
+					transition: unset;
+				}
+			}
+		}
+	}
 	&.hvh-scrolled {
-		background: $hvh-neutral-white-color;
+		color: $hvh-neutral-darker-color;
+		background-color: $hvh-neutral-white-color;
 		box-shadow: $hvh-box-shadow;
 		.hvh-logo-main-header {
 			img {
 				&.blur-up.lazyloaded {
-					filter: blur(0);
+					filter: blur(0) brightness(0) invert(1);
 				}
 			}
 		}
-		.hvh-header-buttons {
-			.btn {
-				&:not(.btn-secondary) {
-					color: $hvh-neutral-darker-color;
+	}
+	&.hvh-inverted {
+		&:not(.hvh-scrolled) {
+			background-color: transparent;
+			color: $hvh-neutral-white-color;
+			.hvh-logo-main-header {
+				img {
+					&.blur-up.lazyloaded {
+						filter: blur(0) brightness(0) invert(1);
+					}
 				}
 			}
 		}
-		.hvh-primary-nav {
-			ul {
-				color: $hvh-neutral-darker-color;
+		&.hvh-scrolled {
+			.hvh-logo-main-header {
+				img {
+					&.blur-up.lazyloaded {
+						filter: blur(0);
+					}
+				}
 			}
 		}
 	}
 }
 
-.hvh-main-header {
+.hvh-main-header-main {
 	height: $hvh-height-main-header;
 }
 
@@ -43,8 +68,9 @@ header {
 		height: 36px;
 		width: auto;
 		margin: auto 0;
+		transition: 0.3s all ease-in-out;
 		&.blur-up.lazyloaded {
-			filter: blur(0) brightness(0) invert(1);
+			filter: blur(0);
 		}
 	}
 }
@@ -55,7 +81,6 @@ header {
 	align-items: center;
 	height: 100%;
 	.btn {
-		color: $hvh-neutral-white-color;
 		+ .btn {
 			margin-left: 16px;
 		}
@@ -65,7 +90,6 @@ header {
 .hvh-primary-nav {
 	height: 100%;
 	ul {
-		color: $hvh-neutral-white-color;
 		height: 100%;
 		text-align: center;
 		li {
@@ -74,7 +98,6 @@ header {
 			> a {
 				line-height: $hvh-height-main-header;
 				&:not(.btn) {
-					color: inherit;
 					font-weight: 600;
 				}
 			}

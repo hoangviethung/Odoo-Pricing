@@ -9,7 +9,24 @@ const fixedHeaderWhenScroll = () => {
 	}
 };
 
+const headerVerify = (isInverted) => {
+	if (isInverted == 'true') {
+		document
+			.querySelector('.hvh-main-header')
+			.classList.add('hvh-inverted');
+	}
+};
+
+const pageVerify = () => {
+	const blockData = document.querySelector('#page-verify-template');
+	if (blockData) {
+		const isInverted = blockData.getAttribute('header-inverted');
+		headerVerify(isInverted);
+	}
+};
+
 window.addEventListener('load', (e) => {
+	pageVerify();
 	fixedHeaderWhenScroll();
 	let PricingBoard = new Tab('.hvh-pricing-board .tab-container');
 });
