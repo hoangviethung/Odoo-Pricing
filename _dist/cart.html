@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- *** META *** //-->
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<!-- *** CSS *** //-->
+		<link rel="stylesheet" href="./css/core.min.css"/>
+		<link rel="stylesheet" href="./css/main.min.css"/>
+		<!-- *** FAVICON *** //-->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+		<!-- *** TITLE *** //-->
+		<title>Shopping Cart | Bemo</title>
+	</head>
+	<body>
+		<!-- *** HEADER *** //-->
+		<header class="hvh-main-header">
+			<div class="container">
+				<div class="hvh-main-header-main"><a class="hvh-logo-main-header" href="index.html"><img class="lazyload blur-up" src="./images/logo-bap-software.png" alt="LOGO-BAP"/></a>
+					<div class="hvh-header-buttons"><a class="btn btn-login" href="#">Đăng nhập</a><a class="btn btn-secondary" href="#">Dùng thử miễn phí</a></div>
+					<nav class="hvh-primary-nav">
+						<ul>
+							<li class="has-sub"><a href="#">Ứng dụng</a></li>
+							<li class="has-sub"><a href="#">Cộng đồng</a></li>
+							<li><a href="index.html">Giá cả</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!-- *** MAIN *** //-->
+		<main>
+			<!-- *** CART *** //-->
+			<section class="hvh-cart">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<!-- *** PROGRESS WIZARD *** //-->
+							<div class="hvh-progress-wizard"><a class="no-decoration" href="#">
+									<div class="hvh-progress-wizard-step complete">
+										<div class="hvh-progress-wizard-icon"><i class="fas fa-circle"></i><i class="fad fa-dot-circle icon-active"></i><i class="fas fa-check-circle icon-complete"></i></div>
+										<div class="hvh-progress-wizard-steplabel">Xem đơn hàng</div>
+									</div></a><a class="no-decoration" href="#">
+									<div class="hvh-progress-wizard-step active">
+										<div class="hvh-progress-wizard-icon"><i class="fas fa-circle"></i><i class="fad fa-dot-circle icon-active"></i><i class="fas fa-check-circle icon-complete"></i></div>
+										<div class="hvh-progress-wizard-steplabel">Địa chỉ</div>
+									</div></a><a class="no-decoration" href="#">
+									<div class="hvh-progress-wizard-step">
+										<div class="hvh-progress-wizard-icon"><i class="fas fa-circle"></i><i class="fad fa-dot-circle icon-active"></i><i class="fas fa-check-circle icon-complete"></i></div>
+										<div class="hvh-progress-wizard-steplabel">Xác nhận đơn hàng</div>
+									</div></a></div>
+						</div>
+						<div class="col-12 col-xl-8">
+							<section class="hvh-cart-products">
+								<div class="block-form">
+									<form action="#">
+										<div class="form-row">
+											<div class="form-group col-lg-12">
+												<label class="col-form-label" for="name">Tên</label>
+												<input class="form-control" type="text" name="name"/>
+											</div>
+											<div class="form-group col-lg-6">
+												<label class="col-form-label" for="email">Email</label>
+												<input class="form-control" type="email" name="email"/>
+											</div>
+											<div class="form-group col-lg-6">
+												<label class="col-form-label" for="phone">Điện thoại</label>
+												<input class="form-control" type="tel" name="phone" placeholder="+84"/>
+											</div>
+											<div class="form-group col-lg-6">
+												<label class="col-form-label" for="company_name">Tên Công ty</label>
+												<input class="form-control" type="text" name="company_name"/>
+											</div>
+											<div class="form-group col-lg-6">
+												<label class="col-form-label" for="vat">Mã số Thuế</label>
+												<input class="form-control" type="text" name="vat"/>
+											</div>
+											<div class="form-group col-md-4">
+												<label class="col-form-label" for="zip">Mã Zip</label>
+												<input class="form-control" type="text" name="zip"/>
+											</div>
+											<div class="form-group col-md-8">
+												<label class="col-form-label" for="city">Thành phố</label>
+												<input class="form-control" type="text" name="city"/>
+											</div>
+											<div class="form-group col-lg-6">
+												<label class="col-form-label" for="country_id">Quốc gia</label>
+												<select class="form-control" id="country_id" name="country_id">
+													<option value="value">Chọn quốc gia</option>
+													<option value="">Tên của các quốc gia</option>
+													<option value="">Tên của các quốc gia</option>
+													<option value="">Tên của các quốc gia</option>
+													<option value="">Tên của các quốc gia</option>
+													<option value="">Tên của các quốc gia</option>
+													<option value="">Tên của các quốc gia</option>
+													<option value="">Tên của các quốc gia</option>
+													<option value="">Tên của các quốc gia</option>
+													<option value="">Tên của các quốc gia</option>
+													<option value="">Tên của các quốc gia</option>
+												</select>
+											</div>
+											<div class="form-group col-lg-6">
+												<label class="col-form-label" for="state_id">Tỉnh/TP</label>
+												<select class="form-control" id="country_id" name="state_id">
+													<option value="value">Chọn tỉnh/thành phố</option>
+													<option value="test">Tên của các tỉnh/thành phó</option>
+													<option value="test">Tên của các tỉnh/thành phó</option>
+													<option value="test">Tên của các tỉnh/thành phó</option>
+													<option value="test">Tên của các tỉnh/thành phó</option>
+													<option value="test">Tên của các tỉnh/thành phó</option>
+													<option value="test">Tên của các tỉnh/thành phó</option>
+													<option value="test">Tên của các tỉnh/thành phó</option>
+													<option value="test">Tên của các tỉnh/thành phó</option>
+													<option value="test">Tên của các tỉnh/thành phó</option>
+													<option value="test">Tên của các tỉnh/thành phó</option>
+												</select>
+											</div>
+										</div>
+									</form>
+								</div>
+							</section>
+						</div>
+						<div class="col-12 col-xl-4"></div>
+					</div>
+				</div>
+			</section>
+			<!-- *** PAGE VERIFY TEMPLATE *** //-->
+			<input id="page-verify-template" hidden="hidden" current-page="shopping-cart-page" header-inverted="false"/>
+		</main>
+		<!-- *** OVERLAY *** //-->
+		<div id="overlay"></div>
+		<!-- *** FOOTER *** //-->
+		<footer></footer>
+		<!-- *** JS *** //-->
+		<script src="./js/core.min.js"></script>
+		<script src="./js/main.min.js"></script>
+	</body>
+</html>
