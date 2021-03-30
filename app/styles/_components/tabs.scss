@@ -4,24 +4,6 @@
 			position: relative;
 			cursor: pointer;
 			user-select: none;
-			transition: all 0.3s cubic-bezier(0.2, 0.5, 0.5, 0.8);
-			@media (max-width: 575.98px) {
-				padding-bottom: 0;
-				padding-left: 1.6rem;
-			}
-			&.active {
-				&:after {
-					transform: scale(1) translateX(-50%);
-					@media (max-width: 1024.98px) {
-						transform: scale(1) translateY(-50%);
-					}
-				}
-			}
-			+ .item {
-				@media (max-width: 575.98px) {
-					margin-top: 1.6rem;
-				}
-			}
 		}
 	}
 

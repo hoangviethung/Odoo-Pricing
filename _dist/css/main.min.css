@@ -13569,23 +13569,7 @@ template {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s cubic-bezier(0.2, 0.5, 0.5, 0.8);
-  transition: all 0.3s cubic-bezier(0.2, 0.5, 0.5, 0.8); }
-  @media (max-width: 575.98px) {
-    .tab-container .tab__list .item {
-      padding-bottom: 0;
-      padding-left: 1.6rem; } }
-  .tab-container .tab__list .item.active:after {
-    -webkit-transform: scale(1) translateX(-50%);
-    transform: scale(1) translateX(-50%); }
-    @media (max-width: 1024.98px) {
-      .tab-container .tab__list .item.active:after {
-        -webkit-transform: scale(1) translateY(-50%);
-        transform: scale(1) translateY(-50%); } }
-  @media (max-width: 575.98px) {
-    .tab-container .tab__list .item + .item {
-      margin-top: 1.6rem; } }
+  user-select: none; }
 
 .tab-container .tab__content .content {
   display: none;
