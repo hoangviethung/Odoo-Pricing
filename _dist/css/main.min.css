@@ -13459,11 +13459,20 @@ template {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
+.cl-white {
+  color: #e0e0e0; }
+
 .bg-primary-blue-light-5 {
   background-color: #dbebfa; }
 
 .border-primary-blue-light-color-05 {
   border: 1px solid #dbebfa; }
+
+.bg-primary {
+  background-color: #0c3255; }
+
+.border-primary {
+  border: 1px solid #0c3255; }
 
 #overlay {
   cursor: pointer;
@@ -13888,9 +13897,11 @@ template {
         color: #0c3255;
         margin: 0 2px; }
   .hvh-pricing-board .hvh-pricing-price-yearly-in-year-wrapper {
-    margin: 24px 0;
+    margin: 16px 0;
     text-align: right;
     font-size: 1.2rem; }
+  .hvh-pricing-board .hvh-pricing-price-discount-code {
+    margin: 16px 0; }
   .hvh-pricing-board .hvh-pricing-price-is-not-free-trial,
   .hvh-pricing-board .hvh-pricing-price-is-free-trial {
     margin-bottom: 16px; }
@@ -13910,11 +13921,20 @@ template {
   .hvh-pricing-board .hvh-pricing-board-note {
     margin-top: 16px; }
   .hvh-pricing-board .alert-danger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #eb5757;
     padding: 16px;
     background: #fdeded;
     margin-bottom: 16px; }
+    .hvh-pricing-board .alert-danger :not(i) {
+      padding-left: 8px; }
     .hvh-pricing-board .alert-danger p {
-      color: #eb5757; }
+      margin-bottom: 0; }
 
 .hvh-cart {
   padding-top: 56px; }

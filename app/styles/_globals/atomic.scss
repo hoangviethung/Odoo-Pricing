@@ -164,10 +164,22 @@
 	white-space: nowrap;
 }
 
+.cl-white {
+	color: $hvh-neutral-lighter-border-color;
+}
+
 .bg-primary-blue-light-5 {
 	background-color: $hvh-primary-blue-light-color-05;
 }
 
 .border-primary-blue-light-color-05 {
 	border: 1px solid $hvh-primary-blue-light-color-05;
+}
+
+.bg-primary {
+	background-color: $hvh-primary-color;
+}
+
+.border-primary {
+	border: 1px solid $hvh-primary-color;
 }

@@ -14,6 +14,11 @@
 .hvh-pricing-form {
 	.hvh-pricing-step {
 		margin-bottom: 16px;
+		.row {
+			&:not([class*='col-lg-12']),
+			&:not([class*='col-lg-12']) {
+			}
+		}
 	}
 	.hvh-pricing-step-head {
 		padding: 0 16px;
@@ -219,9 +224,12 @@
 		}
 	}
 	.hvh-pricing-price-yearly-in-year-wrapper {
-		margin: 24px 0;
+		margin: 16px 0;
 		text-align: right;
 		font-size: 1.2rem;
+	}
+	.hvh-pricing-price-discount-code {
+		margin: 16px 0;
 	}
 	.hvh-pricing-price-is-not-free-trial,
 	.hvh-pricing-price-is-free-trial {
@@ -243,11 +251,17 @@
 		margin-top: 16px;
 	}
 	.alert-danger {
+		display: flex;
+		align-items: center;
+		color: $hvh-semantic-negative-color;
 		padding: 16px;
 		background: $hvh-semantic-negative-lightest-color;
 		margin-bottom: 16px;
+		:not(i) {
+			padding-left: 8px;
+		}
 		p {
-			color: $hvh-semantic-negative-color;
+			margin-bottom: 0;
 		}
 	}
 }
