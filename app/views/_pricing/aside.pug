@@ -2,8 +2,10 @@
 .hvh-pricing-board
 	.board-header.tab-container
 		ul.tab__list
-			li.item(toggle-for="tab-pane-yearly") Hằng năm
-			li.item(toggle-for="tab-pane-monthly") Hằng tháng
+			li.item(toggle-for="tab-pane-yearly")
+				span Hằng năm
+			li.item(toggle-for="tab-pane-monthly")
+				span Hằng tháng
 		.tab__content
 			.content(tab-id="tab-pane-yearly")
 				table#o_yearly_table
@@ -15,46 +17,46 @@
 								a(href="#") Người sử dụng
 							td
 								b.hvh-pricing-users-price-yearly $8,000
-								span.hvh-pricing-users-price-currency USD
+								span.hvh-pricing-users-price-currency đ
 						tr
 							td
 								span Giảm giá cho người dùng 
 									sup (1)
 							td
 								b.hvh-pricing-users-price-discount-yearly -$2,000,002.00
-								span.hvh-pricing-users-price-currency USD
+								span.hvh-pricing-users-price-currency đ
 						tr
 							td
 								b
 									span.hvh-pricing-apps-num 7
 									a(href="#") Ứng dụng
 							td
-								b.hvh-pricing-apps-price-yearly $40.00 
-								span.hvh-pricing-users-price-currency USD
+								b.hvh-pricing-apps-price-yearly $40.00
+								span.hvh-pricing-users-price-currency đ
 						tr
 							td
 								b Tổng
 								| / tháng
 								sup (2)
 							td
-								b.hvh-pricing-price-yearly $6,000,046.00 
-								span.hvh-pricing-users-price-currency USD
+								b.hvh-pricing-price-yearly $6,000,046.00
+								span.hvh-pricing-users-price-currency đ
 				.hvh-pricing-price-yearly-in-year-wrapper
 					span
 						sup (2)
 						| Thanh toán hằng năm: 
-					b.hvh-pricing-price-yearly-in-year $72,000,552.00 
-					span.hvh-pricing-users-price-currency USD
+					b.hvh-pricing-price-yearly-in-year $72,000,552.00
+					span.hvh-pricing-users-price-currency đ
 				.hvh-pricing-price-is-not-free-trial
 					.hvh-pricing-form-button
-						a.btn.btn-primary.btn-lg.btn-full(href="cart.html") DÙNG THỬ NGAY
-							span 15 ngày dùng thử miễn phí
+						//- a.btn.btn-primary.btn-lg.btn-full(href="cart.html") DÙNG THỬ NGAY
+						//- 	span 15 ngày dùng thử miễn phí
 						a.btn.btn-positive.btn-lg.btn-full(href="cart.html") MUA NGAY
 						.alert-danger.hvh-pricing-error-no-apps
 							p Vui lòng chọn ít nhất một Ứng dụng.
 				.hvh-pricing-price-is-free-trial
 					p Những ứng dụng này 
-						b miễn phí
+						b miễn phí 
 						| miễn là bạn không cần thêm ứng dụng hoặc tùy chọn lưu trữ.
 					.hvh-pricing-form-button
 						a.btn.btn-primary.btn-lg.btn-full(href="cart.html") BẮT ĐẦU NGAY
@@ -73,39 +75,39 @@
 								a(href="#") Người sử dụng
 							td
 								b.hvh-pricing-users-price-yearly $8,000
-								span.hvh-pricing-users-price-currency USD
+								span.hvh-pricing-users-price-currency đ
 						tr
 							td
 								span Giảm giá cho người dùng 
 									sup (1)
 							td
 								b.hvh-pricing-users-price-discount-yearly -$2,000,002.00
-								span.hvh-pricing-users-price-currency USD
+								span.hvh-pricing-users-price-currency đ
 						tr
 							td
 								b
 									span.hvh-pricing-apps-num 7
 									a(href="#") Ứng dụng
 							td
-								b.hvh-pricing-apps-price-yearly $40.00 
-								span.hvh-pricing-users-price-currency USD
+								b.hvh-pricing-apps-price-yearly $40.00
+								span.hvh-pricing-users-price-currency đ
 						tr
 							td
 								b Tổng
 								| / tháng
 								sup (2)
 							td
-								b.hvh-pricing-price-yearly $6,000,046.00 
-								span.hvh-pricing-users-price-currency USD
+								b.hvh-pricing-price-yearly $6,000,046.00
+								span.hvh-pricing-users-price-currency đ
 				.hvh-pricing-price-yearly-in-year-wrapper
 					span
 						sup (2)
 						| Thanh toán hằng năm: 
-					b.hvh-pricing-price-yearly-in-year $72,000,552.00 
-					span.hvh-pricing-users-price-currency USD
+					b.hvh-pricing-price-yearly-in-year $72,000,552.00
+					span.hvh-pricing-users-price-currency đ
 				.hvh-pricing-price-is-not-free-trial
 					.hvh-pricing-form-button
-						a.btn.btn-primary.btn-lg.btn-full(href="cart.html") DÙNG THỬ NGAY
+						//- a.btn.btn-primary.btn-lg.btn-full(href="cart.html") DÙNG THỬ NGAY
 							span 15 ngày dùng thử miễn phí
 						a.btn.btn-positive.btn-lg.btn-full(href="cart.html") MUA NGAY
 						.alert-danger.hvh-pricing-error-no-apps

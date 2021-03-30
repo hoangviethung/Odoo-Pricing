@@ -163,3 +163,11 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+
+.bg-primary-blue-light-5 {
+	background-color: $hvh-primary-blue-light-color-05;
+}
+
+.border-primary-blue-light-color-05 {
+	border: 1px solid $hvh-primary-blue-light-color-05;
+}

@@ -34,7 +34,7 @@
 	}
 	&.hvh-inverted {
 		&:not(.hvh-scrolled) {
-			background-color: transparent;
+			background-color: $hvh-primary-dark-color-02;
 			color: $hvh-neutral-white-color;
 			.hvh-logo-main-header {
 				img {
@@ -81,6 +81,9 @@
 	align-items: center;
 	height: 100%;
 	.btn {
+		> i {
+			margin-right: 8px;
+		}
 		+ .btn {
 			margin-left: 16px;
 		}
@@ -91,10 +94,14 @@
 	height: 100%;
 	ul {
 		height: 100%;
-		text-align: center;
 		li {
 			display: inline-block;
-			margin: 0 24px;
+			&:first-child {
+				margin-left: 32px;
+			}
+			+ li {
+				margin-left: 24px;
+			}
 			> a {
 				line-height: $hvh-height-main-header;
 				&:not(.btn) {

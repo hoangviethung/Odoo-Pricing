@@ -85,10 +85,10 @@
 }
 
 .btn-secondary {
-	color: $hvh-neutral-white-color;
-	background-color: $hvh-secondary-color;
+	color: $hvh-primary-color;
+	background-color: $hvh-neutral-white-color;
 	&:hover {
-		background-color: $hvh-secondary-dark-color-01;
+		background-color: $hvh-primary-blue-light-color-05;
 	}
 }
 

@@ -100,7 +100,7 @@ export const serve = () => {
 	watch(
 		['app/styles/**/**.scss'],
 		{
-			delay: 300,
+			delay: 500,
 		},
 		series(cssTask),
 	);
