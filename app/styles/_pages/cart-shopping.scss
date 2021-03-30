@@ -1,3 +1,15 @@
 .hvh-cart-shopping {
 	padding-top: $hvh-height-main-header;
+	padding-bottom: 24px;
+	background-color: $hvh-primary-blue-light-color-06;
+}
+
+.table-cart-products {
+	background-color: $hvh-neutral-white-color;
+	margin-top: 32px;
+	padding: 16px;
+	border-radius: 8px;
+	table {
+		width: 100%;
+	}
 }

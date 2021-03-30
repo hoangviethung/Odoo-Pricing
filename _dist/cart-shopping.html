@@ -37,11 +37,11 @@
 					<div class="row">
 						<div class="col-12">
 							<!-- *** PROGRESS WIZARD *** //-->
-							<div class="hvh-progress-wizard"><a class="no-decoration complete" href="cart-shopping.html">
+							<div class="hvh-progress-wizard"><a class="no-decoration active" href="cart-shopping.html">
 									<div class="hvh-progress-wizard-step">
 										<div class="hvh-progress-wizard-icon"><i class="fas fa-circle"></i><i class="fad fa-dot-circle icon-active"></i><i class="fas fa-check-circle icon-complete"></i></div>
 										<div class="hvh-progress-wizard-steplabel">Xem đơn hàng</div>
-									</div></a><a class="no-decoration active" href="address-management.html">
+									</div></a><a class="no-decoration" href="address-management.html">
 									<div class="hvh-progress-wizard-step">
 										<div class="hvh-progress-wizard-icon"><i class="fas fa-circle"></i><i class="fad fa-dot-circle icon-active"></i><i class="fas fa-check-circle icon-complete"></i></div>
 										<div class="hvh-progress-wizard-steplabel">Địa chỉ</div>
@@ -53,7 +53,21 @@
 						</div>
 						<div class="col-12 col-xl-8">
 							<section class="hvh-cart-products">
-								<div class="block-form"></div>
+								<div class="table-cart-products">
+									<table id="cart_products">
+										<thead>
+											<tr>
+												<th>Sản phẩm</th>
+												<th colspan="2">Giá</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><span><img src="./images/icons/icon-module.svg" alt=""/></span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</section>
 						</div>
 						<div class="col-12 col-xl-4"></div>
