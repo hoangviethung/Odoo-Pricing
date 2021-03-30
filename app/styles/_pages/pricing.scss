@@ -67,6 +67,7 @@
 		border-radius: 8px;
 		margin-bottom: 16px;
 		overflow: hidden;
+		user-select: none;
 		box-shadow: $hvh-box-shadow;
 	}
 	.hvh-pricing-app-name {
@@ -103,13 +104,8 @@
 	.hvh-form-checkbox-module {
 		padding: 8px;
 	}
-	.hvh-pricing-hosting {
-		-ms-flex: 0 0 100%;
-		flex: 0 0 100%;
-		max-width: 100%;
-	}
-	.hvh-pricing-checkox-items {
-		.hvh-pricing-item-checkbox {
+	.hvh-pricing-hosting-list {
+		.hvh-pricing-item-hosting {
 			transition: 0.3s all ease-in-out;
 			label {
 				cursor: pointer;

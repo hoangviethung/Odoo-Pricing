@@ -56,7 +56,8 @@
 																	span.hvh-pricing-currency USD
 																| /tháng
 														.hvh-form-checkbox-module
-															input.hvh-pricing-app-checkbox(type="checkbox")
+															.custom-checkbox
+																input.hvh-pricing-app-checkbox(type="checkbox")
 	.hvh-pricing-step
 		.row
 			.col-lg-12
@@ -80,7 +81,8 @@
 															span.hvh-pricing-currency USD
 														| /tháng
 												.hvh-form-checkbox-module
-													input.hvh-pricing-app-checkbox(type="checkbox")
+													.custom-checkbox
+														input.hvh-pricing-app-checkbox(type="checkbox")
 	.hvh-pricing-step
 		.row
 			.col-lg-12
@@ -88,41 +90,14 @@
 					.hvh-pricing-step-head
 						h3 Chọn loại lưu trữ của bạn
 					.hvh-pricing-step-body
-						ul.hvh-pricing-checkox-items
-								li.hvh-pricing-item-checkbox
+						ul.hvh-pricing-hosting-list
+								li.hvh-pricing-item-hosting
 									label
-										input(type="radio" name="hosting")
+										.custom-checkbox
+											input(type="radio" name="hosting")
 										span Lưu trữ đám mây*
-								li.hvh-pricing-item-checkbox
+								li.hvh-pricing-item-hosting
 									label
-										input(type="radio" name="hosting")
+										.custom-checkbox
+											input(type="radio" name="hosting")
 										span On-premise
-								li.hvh-pricing-item-checkbox
-									label
-										input(type="radio" name="hosting")
-										span Nền tảng điện toán đám mây Bemo.sh
-										small
-											a(href="#" target="_blank") (Thông tin thêm và Odoo.sh)
-	.hvh-pricing-step
-		.row
-			.col-lg-12
-				.hvh-pricing-wrapper
-					.hvh-pricing-step-head
-						h3 Dịch vụ thực hiện
-					.hvh-pricing-step-body
-						ul.hvh-pricing-checkox-items
-								li.hvh-pricing-item-checkbox
-									label
-										input(type="radio" name="implementation_service")
-										span Tự triển khai hệ thống
-								li.hvh-pricing-item-checkbox
-									label
-										input(type="radio" name="implementation_service")
-										span On-premise
-								li.hvh-pricing-item-checkbox
-									label
-										input(type="radio" name="implementation_service")
-										span Với một đối tác địa phương 
-										small (được đề nghị cho 
-											b >50 người dùng
-											| )
