@@ -13572,6 +13572,95 @@ template {
   .btn-positive:hover {
     background-color: #37d278; }
 
+.hvh-progress-wizard {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 24px; }
+  .hvh-progress-wizard > a.active .hvh-progress-wizard-steplabel {
+    color: #0c3255; }
+  .hvh-progress-wizard > a.active .hvh-progress-wizard-icon i:not([class*='icon-']) {
+    display: none; }
+  .hvh-progress-wizard > a.active .hvh-progress-wizard-icon i.icon-active {
+    color: #0c3255;
+    display: inline-block;
+    -webkit-box-shadow: 0 0 0 0 rgba(12, 50, 85, 0.1);
+    box-shadow: 0 0 0 0 rgba(12, 50, 85, 0.1);
+    -webkit-animation: pulse-red 2s infinite;
+    animation: pulse-red 2s infinite;
+    border-radius: 50%;
+    -webkit-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+
+@-webkit-keyframes pulse-red {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(12, 50, 85, 0.7);
+    box-shadow: 0 0 0 0 rgba(12, 50, 85, 0.7); }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(12, 50, 85, 0);
+    box-shadow: 0 0 0 10px rgba(12, 50, 85, 0); }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(12, 50, 85, 0);
+    box-shadow: 0 0 0 0 rgba(12, 50, 85, 0); } }
+
+@keyframes pulse-red {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(12, 50, 85, 0.7);
+    box-shadow: 0 0 0 0 rgba(12, 50, 85, 0.7); }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(12, 50, 85, 0);
+    box-shadow: 0 0 0 10px rgba(12, 50, 85, 0); }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(12, 50, 85, 0);
+    box-shadow: 0 0 0 0 rgba(12, 50, 85, 0); } }
+  .hvh-progress-wizard > a.complete .hvh-progress-wizard-steplabel {
+    color: #27ae60; }
+  .hvh-progress-wizard > a.complete .hvh-progress-wizard-icon i:not([class*='icon-']) {
+    display: none; }
+  .hvh-progress-wizard > a.complete .hvh-progress-wizard-icon i.icon-complete {
+    color: #27ae60;
+    display: inline-block; }
+  .hvh-progress-wizard > a.complete .hvh-progress-wizard-icon:before {
+    opacity: 1; }
+
+.hvh-progress-wizard-icon,
+.hvh-progress-wizard-steplabel {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #858585; }
+
+.hvh-progress-wizard-icon {
+  position: relative; }
+  .hvh-progress-wizard-icon i {
+    font-size: 1.6rem;
+    background-color: #ffffff; }
+    .hvh-progress-wizard-icon i[class*='icon-'] {
+      display: none; }
+  .hvh-progress-wizard-icon:after, .hvh-progress-wizard-icon:before {
+    content: '';
+    height: 4px;
+    position: absolute;
+    width: 100%; }
+  .hvh-progress-wizard-icon:after {
+    background-color: #e0e0e0;
+    z-index: -2;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .hvh-progress-wizard-icon:before {
+    background-color: #27ae60;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: -1;
+    opacity: 0; }
+
+.hvh-progress-wizard-steplabel {
+  margin-top: 4px; }
+
 .tab-container .tab__list .item {
   position: relative;
   cursor: pointer;
@@ -13936,51 +14025,10 @@ template {
     .hvh-pricing-board .alert-danger p {
       margin-bottom: 0; }
 
-.hvh-cart {
+.hvh-cart-shopping {
   padding-top: 56px; }
-  .hvh-cart .hvh-progress-wizard {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-top: 24px; }
-  .hvh-cart .hvh-progress-wizard-step.active .hvh-progress-wizard-steplabel {
-    color: #0c3255; }
-  .hvh-cart .hvh-progress-wizard-step.active .hvh-progress-wizard-icon i:not([class*='icon-']) {
-    display: none; }
-  .hvh-cart .hvh-progress-wizard-step.active .hvh-progress-wizard-icon i.icon-active {
-    color: #0c3255;
-    display: inline-block; }
-  .hvh-cart .hvh-progress-wizard-step.complete .hvh-progress-wizard-steplabel {
-    color: #27ae60; }
-  .hvh-cart .hvh-progress-wizard-step.complete .hvh-progress-wizard-icon i:not([class*='icon-']) {
-    display: none; }
-  .hvh-cart .hvh-progress-wizard-step.complete .hvh-progress-wizard-icon i.icon-complete {
-    color: #27ae60;
-    display: inline-block; }
-  .hvh-cart .hvh-progress-wizard-icon,
-  .hvh-cart .hvh-progress-wizard-steplabel {
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #858585; }
-  .hvh-cart .hvh-progress-wizard-icon {
-    position: relative; }
-    .hvh-cart .hvh-progress-wizard-icon i {
-      font-size: 1.6rem; }
-      .hvh-cart .hvh-progress-wizard-icon i[class*='icon-'] {
-        display: none; }
-    .hvh-cart .hvh-progress-wizard-icon:after {
-      content: '';
-      width: 100%;
-      position: absolute;
-      height: 1px;
-      background: #e0e0e0;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      z-index: -1; }
-  .hvh-cart .hvh-progress-wizard-steplabel {
-    margin-top: 4px; }
+
+.hvh-address-management {
+  padding-top: 56px; }
 
 /*# sourceMappingURL=main.min.css.map */

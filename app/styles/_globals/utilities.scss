@@ -107,3 +107,111 @@
 		background-color: $hvh-semantic-positive-light-color;
 	}
 }
+
+.hvh-progress-wizard {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	margin-top: 24px;
+	> a {
+		&.active {
+			.hvh-progress-wizard-steplabel {
+				color: $hvh-primary-color;
+			}
+			.hvh-progress-wizard-icon {
+				i {
+					&:not([class*='icon-']) {
+						display: none;
+					}
+					&.icon-active {
+						color: $hvh-primary-color;
+						display: inline-block;
+						box-shadow: 0 0 0 0
+							rgba($color: $hvh-primary-color, $alpha: 0.1);
+						animation: pulse-red 2s infinite;
+						border-radius: 50%;
+						transition: 0.3s all ease-in-out;
+					}
+					@keyframes pulse-red {
+						0% {
+							box-shadow: 0 0 0 0
+								rgba($color: $hvh-primary-color, $alpha: 0.7);
+						}
+						70% {
+							box-shadow: 0 0 0 10px
+								rgba($color: $hvh-primary-color, $alpha: 0);
+						}
+						100% {
+							box-shadow: 0 0 0 0
+								rgba($color: $hvh-primary-color, $alpha: 0);
+						}
+					}
+				}
+			}
+		}
+		&.complete {
+			.hvh-progress-wizard-steplabel {
+				color: $hvh-semantic-positive-color;
+			}
+			.hvh-progress-wizard-icon {
+				i {
+					&:not([class*='icon-']) {
+						display: none;
+					}
+					&.icon-complete {
+						color: $hvh-semantic-positive-color;
+						display: inline-block;
+					}
+				}
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.hvh-progress-wizard-icon,
+.hvh-progress-wizard-steplabel {
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: $hvh-neutral-medium-sub-color;
+}
+
+.hvh-progress-wizard-icon {
+	position: relative;
+	i {
+		font-size: 1.6rem;
+		background-color: $hvh-neutral-white-color;
+		&[class*='icon-'] {
+			display: none;
+		}
+	}
+	&:after,
+	&:before {
+		content: '';
+		height: 4px;
+		position: absolute;
+		width: 100%;
+	}
+	&:after {
+		background-color: $hvh-neutral-lighter-border-color;
+		z-index: -2;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&:before {
+		background-color: $hvh-semantic-positive-color;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: -1;
+		opacity: 0;
+	}
+}
+
+.hvh-progress-wizard-steplabel {
+	margin-top: 4px;
+}
