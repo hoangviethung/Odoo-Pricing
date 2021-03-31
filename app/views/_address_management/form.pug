@@ -1,21 +1,35 @@
 section.hvh-form-checkout
 	.tab-container
 		ul.tab__list
-			li.item(toggle-for="enterprise") Doanh nghiệp
-			li.item(toggle-for="personal") Cá nhân
+			li.item(toggle-for="enterprise")
+				i.fal.fa-building
+				span Doanh nghiệp
+			li.item(toggle-for="personal")
+				i.fal.fa-user
+				span Cá nhân
 		.tab__content
 			.block-form.content(tab-id="enterprise")
-				form(action="#")
+				form(action="#" autocomplete="off")
 					.form-row
-						.form-group.col-lg-6
+						.col-lg-12
+							.hvh-checkout-head
+								h3 Thông tin bắt buộc*
+						.form-group.col-lg-12
 							label.col-form-label(for="name") Họ và tên*
-							input.form-control(type="text" name="name" placeholder="Nhập họ và tên")
+							input.form-control(type="text" name="name" placeholder="Nhập họ và tên" required valid="waiting")
+							span.invalid-feedback Nhập lại họ và tên
 						.form-group.col-lg-6
-							label.col-form-label(for="phone") Điện thoại
-							input.form-control(type="tel" name="phone" placeholder="+84")
+							label.col-form-label(for="phone") Điện thoại*
+							input.form-control(type="tel" name="phone" placeholder="+84" required valid="waiting")
+							span.invalid-feedback Nhập lại số điện thoại
 						.form-group.col-lg-6
-							label.col-form-label(for="email") Email
-							input.form-control(type="email" name="email" placeholder="Nhập email")
+							label.col-form-label(for="email") Email*
+							input.form-control(type="email" name="email" placeholder="Nhập email" required valid="waiting")
+							span.invalid-feedback Nhập lại email
+					.form-row
+						.col-lg-12
+							.hvh-checkout-head
+								h3 Thông tin chi tiết (không bắt buộc)
 						.form-group.col-lg-6
 							label.col-form-label(for="company_name") Tên Công ty
 							input.form-control(type="text" name="company_name" placeholder="Nhập tên công ty")
@@ -24,10 +38,10 @@ section.hvh-form-checkout
 							input.form-control(type="text" name="adress" placeholder="Nhập địa chỉ")
 						.form-group.col-lg-6
 							label.col-form-label(for="vat") Mã số Thuế
-							input.form-control(type="text" name="vat" placeholder="Nhập tên công ty")
+							input.form-control(type="text" name="vat" placeholder="Nhập mã số thuế công ty")
 						.form-group.col-lg-6
-							label.col-form-label(for="country_id") Quốc gia
-							select#country_id.form-control.custom-select(name="country_id")
+							label.col-form-label Quốc gia
+							select.form-control.custom-select(name="country_id")
 								option(value) Chọn quốc gia
 								-for(i=0;i<10;i++)
 									option(value="test") Tên của các quốc gia
@@ -39,16 +53,17 @@ section.hvh-form-checkout
 									option(value="test") Tên của các phường xã
 						.form-group.col-lg-6
 							label.col-form-label(for="state_id") Tỉnh/TP
-							select#country_id.form-control.custom-select(name="state_id")
+							select.form-control.custom-select(name="state_id")
 								option(value) Quận/ Huyện
 								-for(i=0;i<10;i++)
 									option(value="test") 10
 						.form-group.col-lg-6
 							label.col-form-label(for="state_id") Tỉnh/TP
-							select#country_id.form-control.custom-select(name="state_id")
+							select.form-control.custom-select(name="state_id")
 								option(value) Chọn tỉnh/thành phố
 								-for(i=0;i<10;i++)
 									option(value="test") Tên của các tỉnh/thành phố
+					.form-row
 						.col-lg-12
 							.hvh-checkout-head
 								h3 Hình thức thanh toán
@@ -64,23 +79,31 @@ section.hvh-form-checkout
 											input(type="radio" name="payment")
 										span Thanh toán bằng hình thức online
 			.block-form.content(tab-id="personal")
-				form(action="#")
-					.form-row
+				form(action="#" autocomplete="off")
+					.form-row.form-data-required
+						.col-lg-12
+							.hvh-checkout-head
+								h3 Thông tin bắt buộc*
 						.form-group.col-lg-12
 							label.col-form-label(for="name") Họ và tên*
-							input.form-control(type="text" name="name" placeholder="Nhập họ và tên")
+							input.form-control(type="text" name="name" placeholder="Nhập họ và tên" required)
 						.form-group.col-lg-6
 							label.col-form-label(for="phone") Điện thoại
-							input.form-control(type="tel" name="phone" placeholder="+84")
+							input.form-control(type="tel" name="phone" placeholder="+84" required)
 						.form-group.col-lg-6
 							label.col-form-label(for="phone") Email
-							input.form-control(type="email" name="email" placeholder="Nhập địa chỉ Email")
+							input.form-control(type="email" name="email" placeholder="Nhập địa chỉ Email" required)
+					.form-row
+						.col-lg-12
+							.hvh-checkout-head
+								h3 Thông tin chi tiết (không bắt buộc)
 						.form-group.col-lg-6
-							label.col-form-label(for="country_id") Quốc gia
-							select#country_id.form-control.custom-select(name="country_id")
+							label.col-form-label Quốc gia
+							select.form-control.custom-select(name="country_id")
 								option(value) Chọn quốc gia
 								-for(i=0;i<10;i++)
 									option(value="test") Tên của các quốc gia
+					.form-row
 						.col-lg-12
 							.hvh-checkout-head
 								h3 Hình thức thanh toán
@@ -95,4 +118,4 @@ section.hvh-form-checkout
 										.custom-checkbox
 											input(type="radio" name="payment")
 										span Thanh toán bằng hình thức online
-			input#form_checkout_hidden(hidden data-customer-segment)
+			input#CustomerSegment(hidden value)

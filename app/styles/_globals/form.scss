@@ -1,9 +1,9 @@
 .form-control {
-	padding: 4px 8px;
+	padding: 8px;
 	display: block;
 	width: 100%;
 	background-color: $hvh-neutral-white-color;
-	border-width: 2px;
+	border-width: 1px;
 	border-style: solid;
 	border-color: $hvh-neutral-lighter-border-color;
 	transition: 0.3s all ease-in-out;
@@ -11,6 +11,27 @@
 	&:focus {
 		color: $hvh-primary-color;
 		border-color: $hvh-primary-color;
+	}
+
+	&[valid='true'] {
+		color: $hvh-semantic-positive-color;
+		border-color: $hvh-semantic-positive-color;
+		background-image: url('../images/icons/valid.svg');
+	}
+
+	&[valid='false'] {
+		color: $hvh-semantic-negative-color;
+		border-color: $hvh-semantic-negative-color;
+		background-image: url('../images/icons/invalid.svg');
+		~ .invalid-feedback {
+			display: inline-flex;
+		}
+	}
+	&[valid] {
+		padding-right: 32px;
+		background-size: 16px;
+		background-repeat: no-repeat;
+		background-position: right 8px center;
 	}
 }
 
@@ -21,6 +42,7 @@
 }
 
 .custom-select {
+	cursor: pointer;
 	display: inline-block;
 	width: 100%;
 	vertical-align: middle;
@@ -29,7 +51,7 @@
 	background-size: 8px 10px;
 	border: 1px solid $hvh-neutral-lighter-border-color;
 	appearance: none;
-	padding: 4px 32px 4px 8px;
+	padding: 8px 32px 8px 8px;
 }
 
 .group-custom-checkbox {
@@ -115,6 +137,7 @@
 	align-items: center;
 	padding: 4px 8px;
 	border: 2px solid $hvh-neutral-lighter-border-color;
+	transition: 0.3s all ease-in-out;
 }
 
 .input-group {
@@ -126,10 +149,23 @@
 		flex: 1 1 auto;
 		width: 1%;
 		margin-bottom: 0;
+		&:focus {
+			~ .input-group-append {
+				.input-group-text {
+					border-color: $hvh-primary-color;
+				}
+			}
+		}
 	}
 	.form-control {
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
 		border-right: 0;
 	}
+}
+
+.invalid-feedback {
+	display: none;
+	color: $hvh-semantic-negative-color;
+	margin-top: 8px;
 }

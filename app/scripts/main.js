@@ -1,4 +1,3 @@
-import { clearConfigCache } from 'prettier';
 import Tab from './libraries/tabs';
 
 const fixedHeaderWhenScroll = () => {
@@ -32,26 +31,77 @@ const setValueCustomerSegment = () => {
 		const items__tab = wrapper.querySelectorAll('.tab__list .item');
 		items__tab.forEach((item) => {
 			item.addEventListener('click', (e) => {
-				const value = item.getAttribute('toggle-for');
-				document
-					.querySelector('#form_checkout_hidden')
-					.setAttribute('data-customer-segment', value);
+				const nameTab = item.getAttribute('toggle-for');
+				document.querySelector('#CustomerSegment').value = nameTab;
 			});
 		});
 	} else {
-		console.log('404');
+		console.log('404 - #CustomerSegment');
+	}
+};
+
+const isPhoneValid = (phone) => {
+	return /((09|03|07|08|05)+([0-9]{8})\b)/g.test(phone);
+};
+
+const isEmailValid = (email) => {
+	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
+};
+
+const validateFormGlobal = (item) => {
+	const name = item.getAttribute('name');
+	const type = item.getAttribute('type');
+	if (type == 'text' || type == 'tel' || type == 'email') {
+		item.addEventListener('change', (e) => {
+			if (name == 'name') {
+				if (item.value.length >= 10) {
+					item.setAttribute('valid', true);
+				} else {
+					item.setAttribute('valid', false);
+				}
+			}
+			if (name == 'phone') {
+				if (isPhoneValid(item.value)) {
+					item.setAttribute('valid', true);
+				} else {
+					item.setAttribute('valid', false);
+				}
+			}
+			if (name == 'email') {
+				if (isEmailValid(item.value)) {
+					item.setAttribute('valid', true);
+				} else {
+					item.setAttribute('valid', false);
+				}
+			}
+		});
 	}
 };
 
 const validateFormCheckout = () => {
 	const forms = document.querySelectorAll('.hvh-form-checkout .block-form');
-	const CustomerSegment = document.querySelector('#form_checkout_hidden');
-	if (CustomerSegment) {
-		const value = CustomerSegment.getAttribute('data-customer-segment');
-		console.log(forms);
-	} else {
-		console.log('404');
-	}
+	forms.forEach((form) => {
+		const CustomerSegment = document.querySelector('#CustomerSegment');
+		if (form.getAttribute('tab-id') == CustomerSegment.value) {
+			const itemsRequired = form.querySelectorAll('input[required]');
+			itemsRequired.forEach((item) => {
+				validateFormGlobal(item);
+			});
+			form.addEventListener('change', (e) => {
+				const itemsValid = form.querySelectorAll('input[valid=true]');
+				if (itemsValid.length == itemsRequired.length) {
+					document
+						.querySelector('.hvh-address-management .btn-primary')
+						.removeAttribute('disable');
+				} else {
+					document
+						.querySelector('.hvh-address-management .btn-primary')
+						.setAttribute('disable', 'disable');
+				}
+			});
+		}
+	});
 };
 
 window.addEventListener('load', (e) => {

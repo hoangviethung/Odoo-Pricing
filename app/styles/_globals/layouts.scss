@@ -24,13 +24,6 @@
 		color: $hvh-neutral-darker-color;
 		background-color: $hvh-neutral-white-color;
 		box-shadow: $hvh-box-shadow;
-		.hvh-logo-main-header {
-			img {
-				&.blur-up.lazyloaded {
-					filter: blur(0) brightness(0) invert(1);
-				}
-			}
-		}
 	}
 	&.hvh-inverted {
 		&:not(.hvh-scrolled) {
@@ -81,9 +74,6 @@
 	align-items: center;
 	height: 100%;
 	.btn {
-		> i {
-			margin-right: 8px;
-		}
 		+ .btn {
 			margin-left: 16px;
 		}

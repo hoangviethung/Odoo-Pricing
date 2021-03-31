@@ -65,7 +65,7 @@
 		background-color: $hvh-neutral-white-color;
 		border: 1px solid $hvh-neutral-lighter-border-color;
 		border-radius: 8px;
-		margin-bottom: 16px;
+		height: 100%;
 		overflow: hidden;
 		user-select: none;
 		box-shadow: $hvh-box-shadow;
@@ -97,6 +97,7 @@
 	}
 	.hvh-pricing-app-real-name {
 		font-weight: 700;
+		margin-bottom: 4px;
 	}
 	.hvh-pricing-app-price {
 		font-size: 0.85em;
@@ -130,6 +131,9 @@
 			+ .group-module {
 				margin-top: 8px;
 			}
+		}
+		[class*='col-'] {
+			margin-bottom: 16px;
 		}
 	}
 	.group-module-name {

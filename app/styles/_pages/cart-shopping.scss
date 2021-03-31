@@ -63,6 +63,17 @@
 		> .hvh-pricing-users {
 			max-width: 220px;
 			width: 100%;
+			.form-control {
+				&:focus {
+					border-color: $hvh-primary-blue-light-color-02;
+					~ .input-group-append {
+						.input-group-text {
+							border-width: 1px;
+							border-color: $hvh-primary-blue-light-color-02;
+						}
+					}
+				}
+			}
 		}
 	}
 	.td-product {

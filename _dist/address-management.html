@@ -55,24 +55,36 @@
 							<section class="hvh-form-checkout">
 								<div class="tab-container">
 									<ul class="tab__list">
-										<li class="item" toggle-for="enterprise">Doanh nghiệp</li>
-										<li class="item" toggle-for="personal">Cá nhân</li>
+										<li class="item" toggle-for="enterprise"><i class="fal fa-building"></i><span>Doanh nghiệp</span></li>
+										<li class="item" toggle-for="personal"><i class="fal fa-user"></i><span>Cá nhân</span></li>
 									</ul>
 									<div class="tab__content">
 										<div class="block-form content" tab-id="enterprise">
-											<form action="#">
+											<form action="#" autocomplete="off">
 												<div class="form-row">
-													<div class="form-group col-lg-6">
+													<div class="col-lg-12">
+														<div class="hvh-checkout-head">
+															<h3>Thông tin bắt buộc*</h3>
+														</div>
+													</div>
+													<div class="form-group col-lg-12">
 														<label class="col-form-label" for="name">Họ và tên*</label>
-														<input class="form-control" type="text" name="name" placeholder="Nhập họ và tên"/>
+														<input class="form-control" type="text" name="name" placeholder="Nhập họ và tên" required="required" valid="waiting"/><span class="invalid-feedback">Nhập lại họ và tên</span>
 													</div>
 													<div class="form-group col-lg-6">
-														<label class="col-form-label" for="phone">Điện thoại</label>
-														<input class="form-control" type="tel" name="phone" placeholder="+84"/>
+														<label class="col-form-label" for="phone">Điện thoại*</label>
+														<input class="form-control" type="tel" name="phone" placeholder="+84" required="required" valid="waiting"/><span class="invalid-feedback">Nhập lại số điện thoại</span>
 													</div>
 													<div class="form-group col-lg-6">
-														<label class="col-form-label" for="email">Email</label>
-														<input class="form-control" type="email" name="email" placeholder="Nhập email"/>
+														<label class="col-form-label" for="email">Email*</label>
+														<input class="form-control" type="email" name="email" placeholder="Nhập email" required="required" valid="waiting"/><span class="invalid-feedback">Nhập lại email</span>
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="col-lg-12">
+														<div class="hvh-checkout-head">
+															<h3>Thông tin chi tiết (không bắt buộc)</h3>
+														</div>
 													</div>
 													<div class="form-group col-lg-6">
 														<label class="col-form-label" for="company_name">Tên Công ty</label>
@@ -84,11 +96,11 @@
 													</div>
 													<div class="form-group col-lg-6">
 														<label class="col-form-label" for="vat">Mã số Thuế</label>
-														<input class="form-control" type="text" name="vat" placeholder="Nhập tên công ty"/>
+														<input class="form-control" type="text" name="vat" placeholder="Nhập mã số thuế công ty"/>
 													</div>
 													<div class="form-group col-lg-6">
-														<label class="col-form-label" for="country_id">Quốc gia</label>
-														<select class="form-control custom-select" id="country_id" name="country_id">
+														<label class="col-form-label">Quốc gia</label>
+														<select class="form-control custom-select" name="country_id">
 															<option value="value">Chọn quốc gia</option>
 															<option value="test">Tên của các quốc gia</option>
 															<option value="test">Tên của các quốc gia</option>
@@ -120,7 +132,7 @@
 													</div>
 													<div class="form-group col-lg-6">
 														<label class="col-form-label" for="state_id">Tỉnh/TP</label>
-														<select class="form-control custom-select" id="country_id" name="state_id">
+														<select class="form-control custom-select" name="state_id">
 															<option value="value">Quận/ Huyện</option>
 															<option value="test">10</option>
 															<option value="test">10</option>
@@ -136,7 +148,7 @@
 													</div>
 													<div class="form-group col-lg-6">
 														<label class="col-form-label" for="state_id">Tỉnh/TP</label>
-														<select class="form-control custom-select" id="country_id" name="state_id">
+														<select class="form-control custom-select" name="state_id">
 															<option value="value">Chọn tỉnh/thành phố</option>
 															<option value="test">Tên của các tỉnh/thành phố</option>
 															<option value="test">Tên của các tỉnh/thành phố</option>
@@ -150,6 +162,8 @@
 															<option value="test">Tên của các tỉnh/thành phố</option>
 														</select>
 													</div>
+												</div>
+												<div class="form-row">
 													<div class="col-lg-12">
 														<div class="hvh-checkout-head">
 															<h3>Hình thức thanh toán</h3>
@@ -175,23 +189,35 @@
 											</form>
 										</div>
 										<div class="block-form content" tab-id="personal">
-											<form action="#">
-												<div class="form-row">
+											<form action="#" autocomplete="off">
+												<div class="form-row form-data-required">
+													<div class="col-lg-12">
+														<div class="hvh-checkout-head">
+															<h3>Thông tin bắt buộc*</h3>
+														</div>
+													</div>
 													<div class="form-group col-lg-12">
 														<label class="col-form-label" for="name">Họ và tên*</label>
-														<input class="form-control" type="text" name="name" placeholder="Nhập họ và tên"/>
+														<input class="form-control" type="text" name="name" placeholder="Nhập họ và tên" required="required"/>
 													</div>
 													<div class="form-group col-lg-6">
 														<label class="col-form-label" for="phone">Điện thoại</label>
-														<input class="form-control" type="tel" name="phone" placeholder="+84"/>
+														<input class="form-control" type="tel" name="phone" placeholder="+84" required="required"/>
 													</div>
 													<div class="form-group col-lg-6">
 														<label class="col-form-label" for="phone">Email</label>
-														<input class="form-control" type="email" name="email" placeholder="Nhập địa chỉ Email"/>
+														<input class="form-control" type="email" name="email" placeholder="Nhập địa chỉ Email" required="required"/>
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="col-lg-12">
+														<div class="hvh-checkout-head">
+															<h3>Thông tin chi tiết (không bắt buộc)</h3>
+														</div>
 													</div>
 													<div class="form-group col-lg-6">
-														<label class="col-form-label" for="country_id">Quốc gia</label>
-														<select class="form-control custom-select" id="country_id" name="country_id">
+														<label class="col-form-label">Quốc gia</label>
+														<select class="form-control custom-select" name="country_id">
 															<option value="value">Chọn quốc gia</option>
 															<option value="test">Tên của các quốc gia</option>
 															<option value="test">Tên của các quốc gia</option>
@@ -205,6 +231,8 @@
 															<option value="test">Tên của các quốc gia</option>
 														</select>
 													</div>
+												</div>
+												<div class="form-row">
 													<div class="col-lg-12">
 														<div class="hvh-checkout-head">
 															<h3>Hình thức thanh toán</h3>
@@ -229,13 +257,13 @@
 												</div>
 											</form>
 										</div>
-										<input id="form_checkout_hidden" hidden="hidden" data-customer-segment="data-customer-segment"/>
+										<input id="CustomerSegment" hidden="hidden" value="value"/>
 									</div>
 								</div>
 							</section>
 						</div>
 						<div class="col-12">
-							<div class="d-flex justify-content-between mt-24"><a class="btn btn-secondary border-primary" href="index.html"><i class="fal fa-arrow-left"></i><span>Quay về</span></a><a class="btn btn-primary" href="address-management.html"><span>Thanh toán ngay</span><i class="fal fa-arrow-right"></i></a></div>
+							<div class="d-flex justify-content-between mt-24"><a class="btn btn-secondary border-primary" href="index.html"><i class="fal fa-arrow-left"></i><span>Quay về</span></a><a class="btn btn-primary" href="address-management.html" disable="disable"><span>Thanh toán ngay</span><i class="fal fa-arrow-right"></i></a></div>
 						</div>
 					</div>
 				</div>
