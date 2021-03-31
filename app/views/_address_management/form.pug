@@ -1,0 +1,98 @@
+section.hvh-form-checkout
+	.tab-container
+		ul.tab__list
+			li.item(toggle-for="enterprise") Doanh nghiệp
+			li.item(toggle-for="personal") Cá nhân
+		.tab__content
+			.block-form.content(tab-id="enterprise")
+				form(action="#")
+					.form-row
+						.form-group.col-lg-6
+							label.col-form-label(for="name") Họ và tên*
+							input.form-control(type="text" name="name" placeholder="Nhập họ và tên")
+						.form-group.col-lg-6
+							label.col-form-label(for="phone") Điện thoại
+							input.form-control(type="tel" name="phone" placeholder="+84")
+						.form-group.col-lg-6
+							label.col-form-label(for="email") Email
+							input.form-control(type="email" name="email" placeholder="Nhập email")
+						.form-group.col-lg-6
+							label.col-form-label(for="company_name") Tên Công ty
+							input.form-control(type="text" name="company_name" placeholder="Nhập tên công ty")
+						.form-group.col-lg-6
+							label.col-form-label(for="company_name") Địa chỉ
+							input.form-control(type="text" name="adress" placeholder="Nhập địa chỉ")
+						.form-group.col-lg-6
+							label.col-form-label(for="vat") Mã số Thuế
+							input.form-control(type="text" name="vat" placeholder="Nhập tên công ty")
+						.form-group.col-lg-6
+							label.col-form-label(for="country_id") Quốc gia
+							select#country_id.form-control.custom-select(name="country_id")
+								option(value) Chọn quốc gia
+								-for(i=0;i<10;i++)
+									option(value="test") Tên của các quốc gia
+						.form-group.col-lg-6
+							label.col-form-label(for="ward_id") Phường/ Xã
+							select#ward_id.form-control.custom-select(name="ward_id")
+								option(value) Chọn Phường/ Xã
+								-for(i=0;i<10;i++)
+									option(value="test") Tên của các phường xã
+						.form-group.col-lg-6
+							label.col-form-label(for="state_id") Tỉnh/TP
+							select#country_id.form-control.custom-select(name="state_id")
+								option(value) Quận/ Huyện
+								-for(i=0;i<10;i++)
+									option(value="test") 10
+						.form-group.col-lg-6
+							label.col-form-label(for="state_id") Tỉnh/TP
+							select#country_id.form-control.custom-select(name="state_id")
+								option(value) Chọn tỉnh/thành phố
+								-for(i=0;i<10;i++)
+									option(value="test") Tên của các tỉnh/thành phố
+						.col-lg-12
+							.hvh-checkout-head
+								h3 Hình thức thanh toán
+							ul.hvh-payments
+								li.hvh-item-payment
+									label.group-custom-checkbox
+										.custom-checkbox
+											input(type="radio" name="payment" checked="checked")
+										span Thanh toán bằng hình thức gửi hóa đơn về email
+								li.hvh-item-payment
+									label.group-custom-checkbox
+										.custom-checkbox
+											input(type="radio" name="payment")
+										span Thanh toán bằng hình thức online
+			.block-form.content(tab-id="personal")
+				form(action="#")
+					.form-row
+						.form-group.col-lg-12
+							label.col-form-label(for="name") Họ và tên*
+							input.form-control(type="text" name="name" placeholder="Nhập họ và tên")
+						.form-group.col-lg-6
+							label.col-form-label(for="phone") Điện thoại
+							input.form-control(type="tel" name="phone" placeholder="+84")
+						.form-group.col-lg-6
+							label.col-form-label(for="phone") Email
+							input.form-control(type="email" name="email" placeholder="Nhập địa chỉ Email")
+						.form-group.col-lg-6
+							label.col-form-label(for="country_id") Quốc gia
+							select#country_id.form-control.custom-select(name="country_id")
+								option(value) Chọn quốc gia
+								-for(i=0;i<10;i++)
+									option(value="test") Tên của các quốc gia
+						.col-lg-12
+							.hvh-checkout-head
+								h3 Hình thức thanh toán
+							ul.hvh-payments
+								li.hvh-item-payment
+									label.group-custom-checkbox
+										.custom-checkbox
+											input(type="radio" name="payment" checked="checked")
+										span Thanh toán bằng hình thức gửi hóa đơn về email
+								li.hvh-item-payment
+									label.group-custom-checkbox
+										.custom-checkbox
+											input(type="radio" name="payment")
+										span Thanh toán bằng hình thức online
+			input#form_checkout_hidden(data-customer-segment)

@@ -54,23 +54,127 @@
 						<div class="col-12 col-xl-8">
 							<section class="hvh-cart-products">
 								<div class="table-cart-products">
+									<div class="table-cart-head">
+										<h3>Đơn hàng</h3>
+									</div>
 									<table id="cart_products">
 										<thead>
 											<tr>
-												<th>Sản phẩm</th>
-												<th colspan="2">Giá</th>
+												<th colspan="2">Số lượng người dùng</th>
+												<th>Giá</th>
+												<th></th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td><span><img src="./images/icons/icon-module.svg" alt=""/></span></td>
+												<td class="td-num-users" colspan="2">
+													<div class="hvh-pricing-users">
+														<div class="input-group">
+															<input class="form-control border-primary-blue-light-color-05" type="number" min="1" value="1"/>
+															<div class="input-group-append"><span class="input-group-text bg-primary-blue-light-5 border-primary-blue-light-color-05">Người sử dụng</span></div>
+														</div>
+													</div>
+												</td>
+												<td class="td-result-pricing-users"><b>1.600.000.000</b><span>đ</span></td>
+												<td></td>
+											</tr>
+										</tbody>
+										<tbody>
+											<tr>
+												<td class="td-img">
+													<div><img class="lazyload blur-up" src="./images/icons/icon-module.svg" alt="CRM - Quản lý quan hệ khách hàng"/></div>
+												</td>
+												<td class="td-product">CRM - Quản lý quan hệ khách hàng</td>
+												<td class="td-price"><b>120.000</b><span>đ</span></td>
+												<td class="td-action"><a href="#" aria-label="Xóa khỏi giỏ hàng"><i class="fas fa-trash-alt"></i></a></td>
+											</tr>
+											<tr>
+												<td class="td-img">
+													<div><img class="lazyload blur-up" src="./images/icons/icon-module.svg" alt="CRM - Quản lý quan hệ khách hàng"/></div>
+												</td>
+												<td class="td-product">CRM - Quản lý quan hệ khách hàng</td>
+												<td class="td-price"><b>120.000</b><span>đ</span></td>
+												<td class="td-action"><a href="#" aria-label="Xóa khỏi giỏ hàng"><i class="fas fa-trash-alt"></i></a></td>
+											</tr>
+											<tr>
+												<td class="td-img">
+													<div><img class="lazyload blur-up" src="./images/icons/icon-module.svg" alt="CRM - Quản lý quan hệ khách hàng"/></div>
+												</td>
+												<td class="td-product">CRM - Quản lý quan hệ khách hàng</td>
+												<td class="td-price"><b>120.000</b><span>đ</span></td>
+												<td class="td-action"><a href="#" aria-label="Xóa khỏi giỏ hàng"><i class="fas fa-trash-alt"></i></a></td>
+											</tr>
+											<tr>
+												<td class="td-img">
+													<div><img class="lazyload blur-up" src="./images/icons/icon-module.svg" alt="CRM - Quản lý quan hệ khách hàng"/></div>
+												</td>
+												<td class="td-product">CRM - Quản lý quan hệ khách hàng</td>
+												<td class="td-price"><b>120.000</b><span>đ</span></td>
+												<td class="td-action"><a href="#" aria-label="Xóa khỏi giỏ hàng"><i class="fas fa-trash-alt"></i></a></td>
+											</tr>
+											<tr>
+												<td class="td-img">
+													<div><img class="lazyload blur-up" src="./images/icons/icon-module.svg" alt="CRM - Quản lý quan hệ khách hàng"/></div>
+												</td>
+												<td class="td-product">CRM - Quản lý quan hệ khách hàng</td>
+												<td class="td-price"><b>120.000</b><span>đ</span></td>
+												<td class="td-action"><a href="#" aria-label="Xóa khỏi giỏ hàng"><i class="fas fa-trash-alt"></i></a></td>
 											</tr>
 										</tbody>
 									</table>
 								</div>
 							</section>
 						</div>
-						<div class="col-12 col-xl-4"></div>
+						<div class="col-12 col-xl-4">
+							<section class="hvh-cart-summary">
+								<div class="table-cart-summary">
+									<div class="table-cart-head">
+										<h3>Tổng đơn hàng</h3>
+									</div>
+									<table id="cart_total">
+										<tbody>
+											<tr>
+												<td>Thành tiền</td>
+												<td><b>1.600.000.000</b><span>đ</span></td>
+											</tr>
+											<tr>
+												<td>Các loại thuế</td>
+												<td><b>0</b><span>đ</span></td>
+											</tr>
+											<tr>
+												<td>Thành tiền</td>
+												<td><b>-200.000</b><span>đ</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="table-order-total">
+									<table id="order_total">
+										<tbody>
+											<tr>
+												<td>TỔNG TIỀN</td>
+												<td><b>1.580.000.000</b><span>đ</span></td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<div class="hvh-pricing-price-discount-code">
+														<div class="input-group">
+															<input class="form-control" type="text" placeholder="Nhập mã khuyến mãi"/>
+															<div class="input-group-append">
+																<button class="input-group-text cl-white bg-primary">ÁP DỤNG</button>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</section>
+						</div>
+						<div class="col-12">
+							<div class="d-flex justify-content-between mt-24"><a class="btn btn-secondary border-primary" href="index.html"><i class="fal fa-arrow-left"></i><span>Tiếp tục mua hàng</span></a><a class="btn btn-primary" href="address-management.html"><span>Tiến hành thanh toán</span><i class="fal fa-arrow-right"></i></a></div>
+						</div>
 					</div>
 				</div>
 			</section>

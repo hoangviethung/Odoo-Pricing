@@ -73,6 +73,12 @@
 	padding: 0.375rem 0.75rem;
 	transition: 0.3s all ease-in-out;
 	border-radius: 0.3rem;
+	i ~ span {
+		margin-left: 8px;
+	}
+	span ~ i {
+		margin-left: 8px;
+	}
 }
 
 .btn-lg {
@@ -112,7 +118,7 @@
 	display: grid;
 	width: 100%;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	margin-top: 24px;
+	margin: 32px 0;
 	> a {
 		&.active {
 			.hvh-progress-wizard-steplabel {
@@ -183,8 +189,10 @@
 	position: relative;
 	z-index: 10;
 	i {
-		font-size: 1.6rem;
+		color: $hvh-neutral-light-disable-color;
+		font-size: 2.4rem;
 		background-color: $hvh-neutral-white-color;
+		border-radius: 50%;
 		&[class*='icon-'] {
 			display: none;
 		}

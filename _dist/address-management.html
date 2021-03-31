@@ -44,84 +44,199 @@
 									</div></a><a class="no-decoration active" href="address-management.html">
 									<div class="hvh-progress-wizard-step">
 										<div class="hvh-progress-wizard-icon"><i class="fas fa-circle"></i><i class="fad fa-dot-circle icon-active"></i><i class="fas fa-check-circle icon-complete"></i></div>
-										<div class="hvh-progress-wizard-steplabel">Địa chỉ</div>
+										<div class="hvh-progress-wizard-steplabel">Thanh Toán</div>
 									</div></a><a class="no-decoration" href="#">
 									<div class="hvh-progress-wizard-step">
 										<div class="hvh-progress-wizard-icon"><i class="fas fa-circle"></i><i class="fad fa-dot-circle icon-active"></i><i class="fas fa-check-circle icon-complete"></i></div>
 										<div class="hvh-progress-wizard-steplabel">Xác nhận đơn hàng</div>
 									</div></a></div>
 						</div>
-						<div class="col-12 col-xl-8">
-							<section class="hvh-cart-products">
-								<div class="block-form">
-									<form action="#">
-										<div class="form-row">
-											<div class="form-group col-lg-12">
-												<label class="col-form-label" for="name">Tên</label>
-												<input class="form-control" type="text" name="name"/>
-											</div>
-											<div class="form-group col-lg-6">
-												<label class="col-form-label" for="email">Email</label>
-												<input class="form-control" type="email" name="email"/>
-											</div>
-											<div class="form-group col-lg-6">
-												<label class="col-form-label" for="phone">Điện thoại</label>
-												<input class="form-control" type="tel" name="phone" placeholder="+84"/>
-											</div>
-											<div class="form-group col-lg-6">
-												<label class="col-form-label" for="company_name">Tên Công ty</label>
-												<input class="form-control" type="text" name="company_name"/>
-											</div>
-											<div class="form-group col-lg-6">
-												<label class="col-form-label" for="vat">Mã số Thuế</label>
-												<input class="form-control" type="text" name="vat"/>
-											</div>
-											<div class="form-group col-md-4">
-												<label class="col-form-label" for="zip">Mã Zip</label>
-												<input class="form-control" type="text" name="zip"/>
-											</div>
-											<div class="form-group col-md-8">
-												<label class="col-form-label" for="city">Thành phố</label>
-												<input class="form-control" type="text" name="city"/>
-											</div>
-											<div class="form-group col-lg-6">
-												<label class="col-form-label" for="country_id">Quốc gia</label>
-												<select class="form-control" id="country_id" name="country_id">
-													<option value="value">Chọn quốc gia</option>
-													<option value="test">Tên của các quốc gia</option>
-													<option value="test">Tên của các quốc gia</option>
-													<option value="test">Tên của các quốc gia</option>
-													<option value="test">Tên của các quốc gia</option>
-													<option value="test">Tên của các quốc gia</option>
-													<option value="test">Tên của các quốc gia</option>
-													<option value="test">Tên của các quốc gia</option>
-													<option value="test">Tên của các quốc gia</option>
-													<option value="test">Tên của các quốc gia</option>
-													<option value="test">Tên của các quốc gia</option>
-												</select>
-											</div>
-											<div class="form-group col-lg-6">
-												<label class="col-form-label" for="state_id">Tỉnh/TP</label>
-												<select class="form-control" id="country_id" name="state_id">
-													<option value="value">Chọn tỉnh/thành phố</option>
-													<option value="test">Tên của các tỉnh/thành phó</option>
-													<option value="test">Tên của các tỉnh/thành phó</option>
-													<option value="test">Tên của các tỉnh/thành phó</option>
-													<option value="test">Tên của các tỉnh/thành phó</option>
-													<option value="test">Tên của các tỉnh/thành phó</option>
-													<option value="test">Tên của các tỉnh/thành phó</option>
-													<option value="test">Tên của các tỉnh/thành phó</option>
-													<option value="test">Tên của các tỉnh/thành phó</option>
-													<option value="test">Tên của các tỉnh/thành phó</option>
-													<option value="test">Tên của các tỉnh/thành phó</option>
-												</select>
-											</div>
+						<div class="col-12">
+							<section class="hvh-form-checkout">
+								<div class="tab-container">
+									<ul class="tab__list">
+										<li class="item" toggle-for="enterprise">Doanh nghiệp</li>
+										<li class="item" toggle-for="personal">Cá nhân</li>
+									</ul>
+									<div class="tab__content">
+										<div class="block-form content" tab-id="enterprise">
+											<form action="#">
+												<div class="form-row">
+													<div class="form-group col-lg-6">
+														<label class="col-form-label" for="name">Họ và tên*</label>
+														<input class="form-control" type="text" name="name" placeholder="Nhập họ và tên"/>
+													</div>
+													<div class="form-group col-lg-6">
+														<label class="col-form-label" for="phone">Điện thoại</label>
+														<input class="form-control" type="tel" name="phone" placeholder="+84"/>
+													</div>
+													<div class="form-group col-lg-6">
+														<label class="col-form-label" for="email">Email</label>
+														<input class="form-control" type="email" name="email" placeholder="Nhập email"/>
+													</div>
+													<div class="form-group col-lg-6">
+														<label class="col-form-label" for="company_name">Tên Công ty</label>
+														<input class="form-control" type="text" name="company_name" placeholder="Nhập tên công ty"/>
+													</div>
+													<div class="form-group col-lg-6">
+														<label class="col-form-label" for="company_name">Địa chỉ</label>
+														<input class="form-control" type="text" name="adress" placeholder="Nhập địa chỉ"/>
+													</div>
+													<div class="form-group col-lg-6">
+														<label class="col-form-label" for="vat">Mã số Thuế</label>
+														<input class="form-control" type="text" name="vat" placeholder="Nhập tên công ty"/>
+													</div>
+													<div class="form-group col-lg-6">
+														<label class="col-form-label" for="country_id">Quốc gia</label>
+														<select class="form-control custom-select" id="country_id" name="country_id">
+															<option value="value">Chọn quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+														</select>
+													</div>
+													<div class="form-group col-lg-6">
+														<label class="col-form-label" for="ward_id">Phường/ Xã</label>
+														<select class="form-control custom-select" id="ward_id" name="ward_id">
+															<option value="value">Chọn Phường/ Xã</option>
+															<option value="test">Tên của các phường xã</option>
+															<option value="test">Tên của các phường xã</option>
+															<option value="test">Tên của các phường xã</option>
+															<option value="test">Tên của các phường xã</option>
+															<option value="test">Tên của các phường xã</option>
+															<option value="test">Tên của các phường xã</option>
+															<option value="test">Tên của các phường xã</option>
+															<option value="test">Tên của các phường xã</option>
+															<option value="test">Tên của các phường xã</option>
+															<option value="test">Tên của các phường xã</option>
+														</select>
+													</div>
+													<div class="form-group col-lg-6">
+														<label class="col-form-label" for="state_id">Tỉnh/TP</label>
+														<select class="form-control custom-select" id="country_id" name="state_id">
+															<option value="value">Quận/ Huyện</option>
+															<option value="test">10</option>
+															<option value="test">10</option>
+															<option value="test">10</option>
+															<option value="test">10</option>
+															<option value="test">10</option>
+															<option value="test">10</option>
+															<option value="test">10</option>
+															<option value="test">10</option>
+															<option value="test">10</option>
+															<option value="test">10</option>
+														</select>
+													</div>
+													<div class="form-group col-lg-6">
+														<label class="col-form-label" for="state_id">Tỉnh/TP</label>
+														<select class="form-control custom-select" id="country_id" name="state_id">
+															<option value="value">Chọn tỉnh/thành phố</option>
+															<option value="test">Tên của các tỉnh/thành phố</option>
+															<option value="test">Tên của các tỉnh/thành phố</option>
+															<option value="test">Tên của các tỉnh/thành phố</option>
+															<option value="test">Tên của các tỉnh/thành phố</option>
+															<option value="test">Tên của các tỉnh/thành phố</option>
+															<option value="test">Tên của các tỉnh/thành phố</option>
+															<option value="test">Tên của các tỉnh/thành phố</option>
+															<option value="test">Tên của các tỉnh/thành phố</option>
+															<option value="test">Tên của các tỉnh/thành phố</option>
+															<option value="test">Tên của các tỉnh/thành phố</option>
+														</select>
+													</div>
+													<div class="col-lg-12">
+														<div class="hvh-checkout-head">
+															<h3>Hình thức thanh toán</h3>
+														</div>
+														<ul class="hvh-payments">
+															<li class="hvh-item-payment">
+																<label class="group-custom-checkbox">
+																	<div class="custom-checkbox">
+																		<input type="radio" name="payment" checked="checked"/>
+																	</div><span>Thanh toán bằng hình thức gửi hóa đơn về email</span>
+																</label>
+															</li>
+															<li class="hvh-item-payment">
+																<label class="group-custom-checkbox">
+																	<div class="custom-checkbox">
+																		<input type="radio" name="payment"/>
+																	</div><span>Thanh toán bằng hình thức online</span>
+																</label>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</form>
 										</div>
-									</form>
+										<div class="block-form content" tab-id="personal">
+											<form action="#">
+												<div class="form-row">
+													<div class="form-group col-lg-12">
+														<label class="col-form-label" for="name">Họ và tên*</label>
+														<input class="form-control" type="text" name="name" placeholder="Nhập họ và tên"/>
+													</div>
+													<div class="form-group col-lg-6">
+														<label class="col-form-label" for="phone">Điện thoại</label>
+														<input class="form-control" type="tel" name="phone" placeholder="+84"/>
+													</div>
+													<div class="form-group col-lg-6">
+														<label class="col-form-label" for="phone">Email</label>
+														<input class="form-control" type="email" name="email" placeholder="Nhập địa chỉ Email"/>
+													</div>
+													<div class="form-group col-lg-6">
+														<label class="col-form-label" for="country_id">Quốc gia</label>
+														<select class="form-control custom-select" id="country_id" name="country_id">
+															<option value="value">Chọn quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+															<option value="test">Tên của các quốc gia</option>
+														</select>
+													</div>
+													<div class="col-lg-12">
+														<div class="hvh-checkout-head">
+															<h3>Hình thức thanh toán</h3>
+														</div>
+														<ul class="hvh-payments">
+															<li class="hvh-item-payment">
+																<label class="group-custom-checkbox">
+																	<div class="custom-checkbox">
+																		<input type="radio" name="payment" checked="checked"/>
+																	</div><span>Thanh toán bằng hình thức gửi hóa đơn về email</span>
+																</label>
+															</li>
+															<li class="hvh-item-payment">
+																<label class="group-custom-checkbox">
+																	<div class="custom-checkbox">
+																		<input type="radio" name="payment"/>
+																	</div><span>Thanh toán bằng hình thức online</span>
+																</label>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</form>
+										</div>
+										<input id="form_checkout_hidden" data-customer-segment="data-customer-segment"/>
+									</div>
 								</div>
 							</section>
 						</div>
-						<div class="col-12 col-xl-4"></div>
+						<div class="col-12">
+							<div class="d-flex justify-content-between mt-24"><a class="btn btn-secondary border-primary" href="index.html"><i class="fal fa-arrow-left"></i><span>Quay về</span></a><a class="btn btn-primary" href="address-management.html"><span>Thanh toán ngay</span><i class="fal fa-arrow-right"></i></a></div>
+						</div>
 					</div>
 				</div>
 			</section>

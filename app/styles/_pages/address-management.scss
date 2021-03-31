@@ -1,3 +1,43 @@
 .hvh-address-management {
 	padding-top: $hvh-height-main-header;
+	background: $hvh-primary-blue-light-color-06;
+	padding-bottom: 24px;
+	.btn-primary {
+		cursor: not-allowed;
+		pointer-events: none;
+		opacity: 0.8;
+	}
+}
+
+.hvh-form-checkout {
+	padding: 16px;
+	background: $hvh-neutral-white-color;
+	border-radius: 8px;
+	.tab__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 16px;
+		.item {
+			font-weight: 700;
+			padding: 0.8rem 1.2rem;
+			background: transparent;
+			transition: 0.3s all ease-in-out;
+			border-radius: 4px;
+			&.active {
+				color: $hvh-neutral-white-color;
+				background: $hvh-primary-color;
+			}
+			+ .item {
+				margin-left: 16px;
+			}
+		}
+	}
+	.hvh-payments {
+		margin-top: 16px;
+		.hvh-item-payment {
+			+ .hvh-item-payment {
+				margin-top: 16px;
+			}
+		}
+	}
 }

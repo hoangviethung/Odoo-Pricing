@@ -1,12 +1,35 @@
 section.hvh-cart-products
 	.table-cart-products
+		.table-cart-head
+			h3 Đơn hàng
 		table#cart_products
 			thead
 				tr
-					th Sản phẩm
-					th(colspan="2") Giá
+					th(colspan="2") Số lượng người dùng
+					th Giá
+					th
 			tbody
 				tr
+					td.td-num-users(colspan="2")
+						.hvh-pricing-users
+							.input-group
+								input.form-control.border-primary-blue-light-color-05(type="number" min="1" value="1")
+								.input-group-append
+									span.input-group-text.bg-primary-blue-light-5.border-primary-blue-light-color-05 Người sử dụng
+					td.td-result-pricing-users
+						b 1.600.000.000
+						span đ
 					td
-						span
-							img(src="./images/icons/icon-module.svg", alt="")
+			tbody
+				-for(i=0;i<5;i++)
+					tr
+						td.td-img
+							div
+								img.lazyload.blur-up(src="./images/icons/icon-module.svg", alt="CRM - Quản lý quan hệ khách hàng")
+						td.td-product CRM - Quản lý quan hệ khách hàng
+						td.td-price
+							b 120.000
+							span đ
+						td.td-action
+							a(href="#" aria-label="Xóa khỏi giỏ hàng")
+								i.fas.fa-trash-alt
