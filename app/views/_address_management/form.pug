@@ -80,19 +80,19 @@ section.hvh-form-checkout
 										span Thanh toán bằng hình thức online
 			.block-form.content(tab-id="personal")
 				form(action="#" autocomplete="off")
-					.form-row.form-data-required
+					.form-row
 						.col-lg-12
 							.hvh-checkout-head
 								h3 Thông tin bắt buộc*
 						.form-group.col-lg-12
 							label.col-form-label(for="name") Họ và tên*
-							input.form-control(type="text" name="name" placeholder="Nhập họ và tên" required)
+							input.form-control(type="text" name="name" placeholder="Nhập họ và tên" required valid="waiting")
 						.form-group.col-lg-6
 							label.col-form-label(for="phone") Điện thoại
-							input.form-control(type="tel" name="phone" placeholder="+84" required)
+							input.form-control(type="tel" name="phone" placeholder="+84" required valid="waiting")
 						.form-group.col-lg-6
 							label.col-form-label(for="phone") Email
-							input.form-control(type="email" name="email" placeholder="Nhập địa chỉ Email" required)
+							input.form-control(type="email" name="email" placeholder="Nhập địa chỉ Email" required valid="waiting")
 					.form-row
 						.col-lg-12
 							.hvh-checkout-head

@@ -35,8 +35,6 @@ const setValueCustomerSegment = () => {
 				document.querySelector('#CustomerSegment').value = nameTab;
 			});
 		});
-	} else {
-		console.log('404 - #CustomerSegment');
 	}
 };
 
