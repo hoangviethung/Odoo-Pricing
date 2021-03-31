@@ -33,6 +33,7 @@ const setValueCustomerSegment = () => {
 			item.addEventListener('click', (e) => {
 				const nameTab = item.getAttribute('toggle-for');
 				document.querySelector('#CustomerSegment').value = nameTab;
+				validateFormCheckout();
 			});
 		});
 	}
@@ -47,7 +48,7 @@ const isEmailValid = (email) => {
 	return re.test(String(email).toLowerCase());
 };
 
-const validateFormGlobal = (item) => {
+const validateForm = (item) => {
 	const name = item.getAttribute('name');
 	const type = item.getAttribute('type');
 	if (type == 'text' || type == 'tel' || type == 'email') {
@@ -77,14 +78,25 @@ const validateFormGlobal = (item) => {
 	}
 };
 
+const resetFormsCheckout = (form) => {
+	form.querySelectorAll('input').forEach((input) => {
+		input.value = '';
+		input.setAttribute('valid', 'waiting');
+		document
+			.querySelector('.hvh-address-management .btn-primary')
+			.setAttribute('disable', 'disable');
+	});
+};
+
 const validateFormCheckout = () => {
 	const forms = document.querySelectorAll('.hvh-form-checkout .block-form');
 	forms.forEach((form) => {
+		resetFormsCheckout(form);
 		const CustomerSegment = document.querySelector('#CustomerSegment');
 		if (form.getAttribute('tab-id') == CustomerSegment.value) {
 			const itemsRequired = form.querySelectorAll('input[required]');
 			itemsRequired.forEach((item) => {
-				validateFormGlobal(item);
+				validateForm(item);
 			});
 			form.addEventListener('change', (e) => {
 				const itemsValid = form.querySelectorAll('input[valid=true]');
