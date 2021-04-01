@@ -1,0 +1,41 @@
+section.hvh-form-checkout
+	form(action="payment-complete.html" autocomplete="off")
+		.block-form
+			.form-row
+				.col-lg-12
+					.hvh-checkout-head
+						h3 Thông tin Credit
+				.form-group.col-lg-6
+					label.col-form-label(for="name") Họ và tên*
+					input.form-control(type="text" name="name" placeholder="Nhập họ và tên")
+					span.invalid-feedback Nhập lại họ và tên
+				.form-group.col-lg-3
+					label.col-form-label Chọn tháng hết hạn*
+					select.form-control.custom-select
+						option(value="test") Tháng 1
+						-for(i=0;i<10;i++)
+							option(value="test") Tháng 12
+					span.invalid-feedback Nhập lại tháng hết hạn
+				.form-group.col-lg-3
+					label.col-form-label Chọn năm hết hạn*
+					select.form-control.custom-select
+						option(value) 2020
+						-for(i=0;i<10;i++)
+							option(value="test") 2030
+					span.invalid-feedback Nhập lại năm hết hạn
+				.form-group.col-lg-6
+					label.col-form-label Card number*
+					input.form-control(type="text" placeholder="0192729 38939232 2832930")
+					span.invalid-feedback Nhập lại card number
+				.form-group.col-lg-6
+					label.col-form-label Card vertification code*
+					input.form-control(type="text" placeholder="199")
+					span.invalid-feedback Nhập lại card number
+		// BUTTONS IN FORMS
+		.buttons-form
+			a.btn.btn-secondary.border-primary(href="index.html")
+				i.fal.fa-arrow-left
+				span Quay về
+			button.btn.btn-primary
+				span Thanh toán ngay
+				i.fal.fa-arrow-right

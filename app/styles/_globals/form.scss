@@ -27,7 +27,8 @@
 			display: inline-flex;
 		}
 	}
-	&[valid] {
+
+	&[data-required] {
 		padding-right: 32px;
 		background-size: 16px;
 		background-repeat: no-repeat;
@@ -62,6 +63,9 @@
 	span {
 		margin-left: 8px;
 		font-weight: 700;
+		i {
+			margin-right: 4px;
+		}
 	}
 }
 

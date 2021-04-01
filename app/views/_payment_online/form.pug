@@ -1,0 +1,53 @@
+section.hvh-form-checkout
+	form(action="payment-credit-card.html" autocomplete="off")
+		.block-form
+			.form-row
+				.col-lg-12
+					.hvh-checkout-head
+						h3 Chọn hình thức thanh toán
+					ul.hvh-payments
+						li.hvh-item-payment-online
+							label.group-custom-checkbox
+								.custom-checkbox
+									input(type="radio" name="payment" checked="checked" value="payment-credit-card.html")
+								
+								span
+									i.fas.fa-credit-card-blank
+									| Credit Card
+							.images
+								img(src="./images/MasterCard.png", alt="MasterCard")
+								img(src="./images/Visa.png", alt="MasterCard")
+							.note
+								i.fad.fa-exclamation-circle
+								span You will be redirected to Ingenico Payment Services when you click the Pay Now button.
+						li.hvh-item-payment-online
+							label.group-custom-checkbox
+								.custom-checkbox
+									input(type="radio" name="payment" value="https://www.paypal.com/vn/home")
+								span
+									i.fab.fa-paypal
+									| Paypal
+							.note
+								i.fad.fa-exclamation-circle
+								span You will be redirected to Paypal's website when you click the Pay Now button.
+							.note
+								i.fad.fa-exclamation-circle
+								span Please note that an extra handling fee equivalent to about 3.9% of the total amount will be charged in order to cover Paypal's transaction fees
+						li.hvh-item-payment-online
+							label.group-custom-checkbox
+								.custom-checkbox
+									input(type="radio" name="payment" value="payment-complete.html")
+								span
+									i.fad.fa-university
+									| Wire Transfer
+							.note
+								i.fad.fa-exclamation-circle
+								span Transfer information will be provided after choosing the payment mode.
+		// BUTTONS IN FORMS
+		.buttons-form
+			a.btn.btn-secondary.border-primary(href="index.html")
+				i.fal.fa-arrow-left
+				span Quay về
+			button.btn.btn-primary
+				span Thanh toán ngay
+				i.fal.fa-arrow-right

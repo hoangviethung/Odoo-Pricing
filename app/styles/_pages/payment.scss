@@ -1,4 +1,4 @@
-.hvh-address-management {
+.hvh-payment {
 	padding-top: $hvh-height-main-header;
 	background: $hvh-primary-blue-light-color-06;
 	padding-bottom: 24px;
@@ -54,11 +54,14 @@
 			}
 		}
 	}
-	.tab__content {
+	.block-form {
 		padding: 24px;
 	}
 	.hvh-checkout-head {
 		margin-bottom: 16px;
+		h3 {
+			font-size: 1.8rem;
+		}
 	}
 	.hvh-payments {
 		margin-top: 16px;
@@ -67,10 +70,37 @@
 				margin-top: 16px;
 			}
 		}
-	}
-	.form-row {
-		+ .form-row {
-			margin-top: 24px;
+		.hvh-item-payment-online {
+			font-size: 1.8rem;
+			+ .hvh-item-payment-online {
+				margin-top: 16px;
+			}
+			.images {
+				margin-top: 16px;
+				padding-left: 24px;
+				img {
+					box-shadow: 0 3px 6px
+						rgba($color: $hvh-neutral-black-color, $alpha: 0.16);
+					+ img {
+						margin-left: 16px;
+					}
+				}
+			}
+			.note {
+				display: inline-flex;
+				align-items: center;
+				font-size: 1.2rem;
+				margin-top: 16px;
+				i {
+					color: $hvh-semantic-information-color;
+					padding-right: 8px;
+				}
+			}
 		}
+	}
+	.buttons-form {
+		display: flex;
+		justify-content: space-between;
+		padding: 24px;
 	}
 }

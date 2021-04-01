@@ -1,30 +1,31 @@
 section.hvh-form-checkout
-	.tab-container
-		ul.tab__list
-			li.item(toggle-for="enterprise")
-				i.fal.fa-building
-				span Doanh nghiệp
-			li.item(toggle-for="personal")
-				i.fal.fa-user
-				span Cá nhân
-		.tab__content
-			.block-form.content(tab-id="enterprise")
-				form(action="#" autocomplete="off")
+	form(action="payment-complete.html" autocomplete="off")
+		// TAB 2 FOMRS WRAPPER
+		.tab-container
+			ul.tab__list
+				li.item(toggle-for="enterprise")
+					i.fal.fa-building
+					span Doanh nghiệp
+				li.item(toggle-for="personal")
+					i.fal.fa-user
+					span Cá nhân
+			.tab__content
+				.block-form.content(tab-id="enterprise")
 					.form-row
 						.col-lg-12
 							.hvh-checkout-head
 								h3 Thông tin bắt buộc*
 						.form-group.col-lg-12
 							label.col-form-label(for="name") Họ và tên*
-							input.form-control(type="text" name="name" placeholder="Nhập họ và tên" required valid="waiting")
+							input.form-control(type="text" name="name" placeholder="Nhập họ và tên" data-required)
 							span.invalid-feedback Nhập lại họ và tên
 						.form-group.col-lg-6
 							label.col-form-label(for="phone") Điện thoại*
-							input.form-control(type="tel" name="phone" placeholder="+84" required valid="waiting")
+							input.form-control(type="tel" name="phone" placeholder="+84" data-required)
 							span.invalid-feedback Nhập lại số điện thoại
 						.form-group.col-lg-6
 							label.col-form-label(for="email") Email*
-							input.form-control(type="email" name="email" placeholder="Nhập email" required valid="waiting")
+							input.form-control(type="email" name="email" placeholder="Nhập email" data-required)
 							span.invalid-feedback Nhập lại email
 					.form-row
 						.col-lg-12
@@ -71,28 +72,27 @@ section.hvh-form-checkout
 								li.hvh-item-payment
 									label.group-custom-checkbox
 										.custom-checkbox
-											input(type="radio" name="payment" checked="checked")
+											input(type="radio" name="enterprise_payment" checked="checked" value="payment-complete.html")
 										span Thanh toán bằng hình thức gửi hóa đơn về email
 								li.hvh-item-payment
 									label.group-custom-checkbox
 										.custom-checkbox
-											input(type="radio" name="payment")
+											input(type="radio" name="enterprise_payment" value="payment-online.html")
 										span Thanh toán bằng hình thức online
-			.block-form.content(tab-id="personal")
-				form(action="#" autocomplete="off")
+				.block-form.content(tab-id="personal")
 					.form-row
 						.col-lg-12
 							.hvh-checkout-head
 								h3 Thông tin bắt buộc*
 						.form-group.col-lg-12
 							label.col-form-label(for="name") Họ và tên*
-							input.form-control(type="text" name="name" placeholder="Nhập họ và tên" required valid="waiting")
+							input.form-control(type="text" name="name" placeholder="Nhập họ và tên" data-required)
 						.form-group.col-lg-6
 							label.col-form-label(for="phone") Điện thoại
-							input.form-control(type="tel" name="phone" placeholder="+84" required valid="waiting")
+							input.form-control(type="tel" name="phone" placeholder="+84" data-required)
 						.form-group.col-lg-6
 							label.col-form-label(for="phone") Email
-							input.form-control(type="email" name="email" placeholder="Nhập địa chỉ Email" required valid="waiting")
+							input.form-control(type="email" name="email" placeholder="Nhập địa chỉ Email" data-required)
 					.form-row
 						.col-lg-12
 							.hvh-checkout-head
@@ -111,11 +111,20 @@ section.hvh-form-checkout
 								li.hvh-item-payment
 									label.group-custom-checkbox
 										.custom-checkbox
-											input(type="radio" name="payment" checked="checked")
+											input(type="radio" name="personal_payment" checked="checked" value="payment-complete.html")
 										span Thanh toán bằng hình thức gửi hóa đơn về email
 								li.hvh-item-payment
 									label.group-custom-checkbox
 										.custom-checkbox
-											input(type="radio" name="payment")
+											input(type="radio" name="personal_payment" value="payment-online.html")
 										span Thanh toán bằng hình thức online
-			input#CustomerSegment(hidden value)
+		// BUTTONS IN FORMS
+		.buttons-form
+			a.btn.btn-secondary.border-primary(href="index.html")
+				i.fal.fa-arrow-left
+				span Quay về
+			button.btn.btn-primary
+				span Thanh toán ngay
+				i.fal.fa-arrow-right
+		// GET INPUT HIDDEN HERE
+		input#CustomerSegment(hidden value)

@@ -1,16 +1,18 @@
 // *** CART *** //
-section.hvh-address-management
+section.hvh-cart-shopping
 	.container
 		.row
 			.col-12
 				include progress-wizard
-			.col-12
-				include form
+			.col-12.col-xl-8
+				include products
+			.col-12.col-xl-4
+				include summary
 			.col-12
 				.d-flex.justify-content-between.mt-24
 					a.btn.btn-secondary.border-primary(href="index.html")
 						i.fal.fa-arrow-left
-						span Quay về
-					a.btn.btn-primary(href="address-management.html" disable)
-						span Thanh toán ngay
+						span Tiếp tục mua hàng
+					a.btn.btn-primary(href="payment.html")
+						span Tiến hành thanh toán
 						i.fal.fa-arrow-right

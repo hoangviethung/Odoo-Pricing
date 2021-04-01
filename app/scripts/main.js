@@ -78,38 +78,53 @@ const validateForm = (item) => {
 	}
 };
 
-const resetFormsCheckout = (form) => {
-	form.querySelectorAll('input').forEach((input) => {
-		input.value = '';
-		input.setAttribute('valid', 'waiting');
-		document
-			.querySelector('.hvh-address-management .btn-primary')
-			.setAttribute('disable', 'disable');
+const resetFormsCheckout = (input) => {
+	input.value = '';
+	input.setAttribute('valid', 'waiting');
+	document
+		.querySelector('.hvh-payment .btn-primary')
+		.setAttribute('disable', 'disable');
+};
+
+const updateLinkActionFormCheckout = () => {
+	const payments = document.querySelectorAll('.hvh-payments input');
+	payments.forEach((payment) => {
+		payment.addEventListener('change', (e) => {
+			document
+				.querySelector('.hvh-form-checkout form')
+				.setAttribute('action', payment.value);
+		});
 	});
 };
 
 const validateFormCheckout = () => {
 	const forms = document.querySelectorAll('.hvh-form-checkout .block-form');
 	forms.forEach((form) => {
-		resetFormsCheckout(form);
 		const CustomerSegment = document.querySelector('#CustomerSegment');
-		if (form.getAttribute('tab-id') == CustomerSegment.value) {
-			const itemsRequired = form.querySelectorAll('input[required]');
-			itemsRequired.forEach((item) => {
-				validateForm(item);
-			});
-			form.addEventListener('change', (e) => {
-				const itemsValid = form.querySelectorAll('input[valid=true]');
-				if (itemsValid.length == itemsRequired.length) {
-					document
-						.querySelector('.hvh-address-management .btn-primary')
-						.removeAttribute('disable');
-				} else {
-					document
-						.querySelector('.hvh-address-management .btn-primary')
-						.setAttribute('disable', 'disable');
-				}
-			});
+		if (CustomerSegment) {
+			if (form.getAttribute('tab-id') == CustomerSegment.value) {
+				const itemsRequired = form.querySelectorAll(
+					'input[data-required]',
+				);
+				itemsRequired.forEach((item) => {
+					validateForm(item);
+					resetFormsCheckout(item);
+				});
+				form.addEventListener('change', (e) => {
+					const itemsValid = form.querySelectorAll(
+						'input[valid=true]',
+					);
+					if (itemsValid.length == itemsRequired.length) {
+						document
+							.querySelector('.hvh-payment .btn-primary')
+							.removeAttribute('disable');
+					} else {
+						document
+							.querySelector('.hvh-payment .btn-primary')
+							.setAttribute('disable', 'disable');
+					}
+				});
+			}
 		}
 	});
 };
@@ -118,6 +133,7 @@ window.addEventListener('load', (e) => {
 	pageVerify();
 	fixedHeaderWhenScroll();
 	setValueCustomerSegment();
+	updateLinkActionFormCheckout();
 	let PricingBoard = new Tab('.hvh-pricing-board .tab-container');
 	let FormCheckout = new Tab('.hvh-form-checkout .tab-container');
 	validateFormCheckout();

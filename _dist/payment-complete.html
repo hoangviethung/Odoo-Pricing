@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- *** META *** //-->
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<!-- *** CSS *** //-->
+		<link rel="stylesheet" href="./css/core.min.css"/>
+		<link rel="stylesheet" href="./css/main.min.css"/>
+		<!-- *** FAVICON *** //-->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+		<!-- *** TITLE *** //-->
+		<title>Bemo Complete Payment | Bemo</title>
+	</head>
+	<body>
+		<!-- *** HEADER *** //-->
+		<header class="hvh-main-header">
+			<div class="container">
+				<div class="hvh-main-header-main"><a class="hvh-logo-main-header" href="index.html"><img class="lazyload blur-up" src="./images/logo-bap-software.png" alt="LOGO-BAP"/></a>
+					<div class="hvh-header-buttons"><a class="btn btn-login" href="#"><i class="fal fa-sign-in-alt"></i><span>Đăng nhập</span></a></div>
+					<nav class="hvh-primary-nav">
+						<ul>
+							<li class="has-sub"><a href="#">Ứng dụng</a></li>
+							<li class="has-sub"><a href="#">Cộng đồng</a></li>
+							<li><a href="index.html">Giá cả</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!-- *** MAIN *** //-->
+		<main>
+			<!-- *** CART *** //-->
+			<section class="hvh-payment-complete">
+				<div class="container">
+					<div class="hvh-payment-complete-wrapper">
+						<!-- *** PROGRESS WIZARD *** //-->
+						<div class="hvh-progress-wizard"><a class="no-decoration complete" href="cart.html">
+								<div class="hvh-progress-wizard-step">
+									<div class="hvh-progress-wizard-icon"><i class="fas fa-circle"></i><i class="fad fa-dot-circle icon-active"></i><i class="fas fa-check-circle icon-complete"></i></div>
+									<div class="hvh-progress-wizard-steplabel">Xem đơn hàng</div>
+								</div></a><a class="no-decoration complete" href="payment.html">
+								<div class="hvh-progress-wizard-step">
+									<div class="hvh-progress-wizard-icon"><i class="fas fa-circle"></i><i class="fad fa-dot-circle icon-active"></i><i class="fas fa-check-circle icon-complete"></i></div>
+									<div class="hvh-progress-wizard-steplabel">Thanh toán</div>
+								</div></a><a class="no-decoration complete" href="payment-complete.html">
+								<div class="hvh-progress-wizard-step">
+									<div class="hvh-progress-wizard-icon"><i class="fas fa-circle"></i><i class="fad fa-dot-circle icon-active"></i><i class="fas fa-check-circle icon-complete"></i></div>
+									<div class="hvh-progress-wizard-steplabel">Xác nhận đơn hàng</div>
+								</div></a></div>
+						<!-- *** POPUP NOTIFICATION VALID *** //-->
+						<section class="notification-valid">
+							<div class="icon"><img src="./images/icons/complete-notification.svg" alt="Complete Notification"/></div>
+							<div class="content">
+								<h3>Giao dịch thành công</h3>
+								<p>Đơn hàng #210130MAX4E5G5 của bạn đã được giao dịch thành công</p>
+								<p>Vui lòng đăng nhập email để xác nhận bạn đã nhận hàng và hài lòng với sản phẩm trong vòng 3 ngày. </p>
+							</div>
+							<div class="buttons"><a class="btn btn-primary btn-lg" href="index.html">Trở về trang chủ</a></div>
+						</section>
+					</div>
+				</div>
+			</section>
+			<!-- *** PAGE VERIFY TEMPLATE *** //-->
+			<input id="page-verify-template" hidden="hidden" current-page="complete-payment-page" header-inverted="false"/>
+		</main>
+		<!-- *** OVERLAY *** //-->
+		<div id="overlay"></div>
+		<!-- *** FOOTER *** //-->
+		<footer></footer>
+		<!-- *** JS *** //-->
+		<script src="./js/core.min.js"></script>
+		<script src="./js/main.min.js"></script>
+	</body>
+</html>
