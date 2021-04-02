@@ -60,6 +60,8 @@
 	},
 	"dependencies": {
 		"@fancyapps/fancybox": "^3.5.7",
+		"bootstrap": "^4.6.0",
+		"bootstrap-select": "^1.13.18",
 		"chart.js": "^2.9.4",
 		"jquery": "^3.5.1",
 		"masonry-layout": "^4.2.2",

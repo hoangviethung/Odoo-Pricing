@@ -1,20 +1,22 @@
-@import '_abstracts/variables';
-@import '_abstracts/fonts';
-@import '_abstracts/font-awesome';
+@import 'abstracts/variables';
+@import 'abstracts/fonts';
+@import 'abstracts/font-awesome';
 
-@import '_globals/reboot';
-@import '_globals/grid';
-@import '_globals/form';
-@import '_globals/layouts';
-@import '_globals/atomic';
-@import '_globals/utilities';
+@import 'globals/reboot';
+@import 'globals/form';
+@import 'globals/buttons';
+@import 'globals/layouts';
+@import 'globals/atomic';
+@import 'globals/utilities';
 
-@import '_components/tabs';
-@import '_components/pagination';
-@import '_components/banner-title-page';
+@import 'libraries/grid';
 
-@import '_pages/index';
-@import '_pages/pricing';
-@import '_pages/cart';
-@import '_pages/payment';
-@import '_pages/complete-payment';
+@import 'components/tabs';
+@import 'components/pagination';
+@import 'components/banner-title-page';
+
+@import 'pages/index';
+@import 'pages/pricing';
+@import 'pages/cart';
+@import 'pages/payment';
+@import 'pages/complete-payment';

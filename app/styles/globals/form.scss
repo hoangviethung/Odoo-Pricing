@@ -53,6 +53,12 @@
 	border: 1px solid $hvh-neutral-lighter-border-color;
 	appearance: none;
 	padding: 8px 32px 8px 8px;
+	&.hvh-language-selector {
+		color: $hvh-neutral-white-color;
+		background-color: $hvh-primary-dark-color-01;
+		border-color: transparent;
+		max-width: 220px;
+	}
 }
 
 .group-custom-checkbox {
@@ -172,4 +178,17 @@
 	display: none;
 	color: $hvh-semantic-negative-color;
 	margin-top: 8px;
+}
+
+.hvh-socials {
+	display: flex;
+	flex-wrap: wrap;
+	color: $hvh-neutral-white-color;
+	margin-top: 16px;
+	li {
+		font-size: 2.4rem;
+		+ li {
+			margin-left: 16px;
+		}
+	}
 }
