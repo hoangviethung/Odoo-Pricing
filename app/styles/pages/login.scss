@@ -1,0 +1,70 @@
+.hvh-login {
+	height: 100vh;
+	background-color: $hvh-primary-dark-color-01;
+	background-image: var(--data-bg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top: $hvh-height-main-header;
+}
+.hvh-form-login {
+	h3 {
+		color: $hvh-primary-color;
+		font-size: 2.8rem;
+		margin-bottom: 16px;
+	}
+	h5 {
+		font-size: 1.8rem;
+		font-weight: 500;
+		margin-bottom: 24px;
+		color: $hvh-neutral-medium-sub-color;
+	}
+	.buttons-form {
+		margin-top: 16px;
+	}
+	.forget-password {
+		text-align: right;
+		margin-top: 16px;
+		> a {
+			color: $hvh-semantic-information-color;
+			font-size: 1.5rem;
+		}
+	}
+	button {
+		width: 100%;
+		&[disable] {
+			cursor: not-allowed;
+		}
+	}
+}
+
+.wrapper-say-hi,
+.hvh-form-login {
+	background: $hvh-neutral-white-color;
+	padding: 100px 32px;
+	height: 100%;
+}
+
+.wrapper-say-hi {
+	background-color: $hvh-primary-color;
+	background-image: var(--data-bg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	h1,
+	p {
+		color: $hvh-neutral-white-color;
+	}
+	h1 {
+		font-size: 6rem;
+	}
+	p {
+		font-size: 1.8rem;
+		margin-top: 24px;
+	}
+}
+
+.loign-wrapper {
+	border-radius: 8px;
+	overflow: hidden;
+}

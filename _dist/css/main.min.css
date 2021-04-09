@@ -12716,6 +12716,9 @@ template {
   width: 100%;
   height: 100%; }
 
+.h-100 {
+  height: 100%; }
+
 .padding-left-0, .padding-x-0 {
   padding-left: 0 !important; }
 
@@ -14149,6 +14152,66 @@ template {
     .hvh-pricing-board .alert-danger p {
       margin-bottom: 0; }
 
+.hvh-login {
+  height: 100vh;
+  background-color: #051423;
+  background-image: var(--data-bg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 56px; }
+
+.hvh-form-login h3 {
+  color: #0c3255;
+  font-size: 2.8rem;
+  margin-bottom: 16px; }
+
+.hvh-form-login h5 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: #858585; }
+
+.hvh-form-login .buttons-form {
+  margin-top: 16px; }
+
+.hvh-form-login .forget-password {
+  text-align: right;
+  margin-top: 16px; }
+  .hvh-form-login .forget-password > a {
+    color: #0e6eef;
+    font-size: 1.5rem; }
+
+.hvh-form-login button {
+  width: 100%; }
+  .hvh-form-login button[disable] {
+    cursor: not-allowed; }
+
+.wrapper-say-hi,
+.hvh-form-login {
+  background: #ffffff;
+  padding: 100px 32px;
+  height: 100%; }
+
+.wrapper-say-hi {
+  background-color: #0c3255;
+  background-image: var(--data-bg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .wrapper-say-hi h1,
+  .wrapper-say-hi p {
+    color: #ffffff; }
+  .wrapper-say-hi h1 {
+    font-size: 6rem; }
+  .wrapper-say-hi p {
+    font-size: 1.8rem;
+    margin-top: 24px; }
+
+.loign-wrapper {
+  border-radius: 8px;
+  overflow: hidden; }
+
 .hvh-cart-shopping {
   padding-top: 56px;
   padding-bottom: 24px;
@@ -14261,8 +14324,7 @@ template {
   background: #f1f6f9;
   padding-bottom: 24px; }
   .hvh-payment .btn-primary[disable] {
-    pointer-events: none;
-    opacity: 0.8; }
+    cursor: not-allowed; }
 
 .hvh-form-checkout {
   background: #ffffff;

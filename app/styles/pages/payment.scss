@@ -4,8 +4,7 @@
 	padding-bottom: 24px;
 	.btn-primary {
 		&[disable] {
-			pointer-events: none;
-			opacity: 0.8;
+			cursor: not-allowed;
 		}
 	}
 }

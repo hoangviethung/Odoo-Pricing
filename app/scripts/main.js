@@ -115,18 +115,41 @@ const validateFormCheckout = () => {
 						'input[valid=true]',
 					);
 					if (itemsValid.length == itemsRequired.length) {
-						document
-							.querySelector('.hvh-payment .btn-primary')
-							.removeAttribute('disable');
+						form.querySelector('.btn-primary').removeAttribute(
+							'disable',
+						);
 					} else {
-						document
-							.querySelector('.hvh-payment .btn-primary')
-							.setAttribute('disable', 'disable');
+						form.querySelector('.btn-primary').setAttribute(
+							'disable',
+							'disable',
+						);
 					}
 				});
 			}
 		}
 	});
+};
+
+const validateFormLogin = () => {
+	const form = document.querySelector('.hvh-form-login form');
+	if (form) {
+		form.querySelector('button').setAttribute('disable', 'disable');
+		const itemsRequired = form.querySelectorAll('input[data-required]');
+		itemsRequired.forEach((item) => {
+			validateForm(item);
+		});
+		form.addEventListener('change', (e) => {
+			const itemsValid = form.querySelectorAll('input[valid=true]');
+			if (itemsValid.length == itemsRequired.length) {
+				form.querySelector('.btn-primary').removeAttribute('disable');
+			} else {
+				form.querySelector('.btn-primary').setAttribute(
+					'disable',
+					'disable',
+				);
+			}
+		});
+	}
 };
 
 window.addEventListener('load', (e) => {
@@ -137,6 +160,7 @@ window.addEventListener('load', (e) => {
 	let PricingBoard = new Tab('.hvh-pricing-board .tab-container');
 	let FormCheckout = new Tab('.hvh-form-checkout .tab-container');
 	validateFormCheckout();
+	validateFormLogin();
 });
 
 window.addEventListener('scroll', (e) => {
