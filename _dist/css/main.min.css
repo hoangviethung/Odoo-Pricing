@@ -12524,6 +12524,15 @@ template {
   .hvh-main-header.hvh-inverted.hvh-scrolled .hvh-logo-main-header img.blur-up.lazyloaded {
     -webkit-filter: blur(0);
     filter: blur(0); }
+  .hvh-main-header.logged .hvh-header-buttons > .btn-login {
+    display: none; }
+  .hvh-main-header.logged .account {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
 
 .hvh-main-header-main {
   height: 56px; }
@@ -12555,6 +12564,24 @@ template {
   height: 100%; }
   .hvh-header-buttons .btn + .btn {
     margin-left: 16px; }
+  .hvh-header-buttons .account {
+    cursor: pointer;
+    display: none; }
+    .hvh-header-buttons .account .avatar {
+      overflow: hidden;
+      margin-right: 8px; }
+      .hvh-header-buttons .account .avatar img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%; }
+    .hvh-header-buttons .account .name {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .hvh-header-buttons .account .name span {
+        color: #0c3255;
+        font-weight: 500; }
 
 .hvh-primary-nav {
   height: 100%; }
@@ -12789,7 +12816,7 @@ template {
   white-space: nowrap; }
 
 .cl-white {
-  color: #e0e0e0; }
+  color: #ffffff; }
 
 .bg-primary-blue-light-5 {
   background-color: #dbebfa; }
@@ -14415,6 +14442,147 @@ template {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 24px; }
+
+.profile {
+  padding-top: 56px;
+  background-color: #f1f6f9;
+  padding-bottom: 56px; }
+  .profile .left-wrapper,
+  .profile .right-wrapper {
+    background-color: #ffffff;
+    margin-top: 32px;
+    padding: 16px;
+    border-radius: 8px; }
+  .profile .right-wrapper h3 {
+    font-size: 2.2rem;
+    color: #0c3255;
+    margin-bottom: 16px; }
+  .profile .card-information-account {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 12px 6px rgba(12, 50, 85, 0.06);
+    box-shadow: 0 12px 6px rgba(12, 50, 85, 0.06);
+    height: 200px;
+    overflow: hidden; }
+    .profile .card-information-account .avatar {
+      -ms-flex: 0 0 40%;
+      -webkit-box-flex: 0;
+      flex: 0 0 40%;
+      max-width: 40%;
+      height: 100%; }
+    .profile .card-information-account .content {
+      -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+      -ms-flex-positive: 1;
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      max-width: 100%; }
+      .profile .card-information-account .content .content_head {
+        background-color: #dbebfa;
+        padding: 4px 8px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .profile .card-information-account .content .content_head h3 {
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: #0c3255; }
+          .profile .card-information-account .content .content_head h3 i {
+            margin-right: 8px; }
+      .profile .card-information-account .content .list-information {
+        padding: 4px 8px;
+        font-size: 12px; }
+        .profile .card-information-account .content .list-information li > i {
+          color: #858585;
+          float: left;
+          margin-right: 8px;
+          margin-top: 4px; }
+        .profile .card-information-account .content .list-information li > span {
+          word-break: break-word; }
+        .profile .card-information-account .content .list-information li + li {
+          margin-top: 8px; }
+        .profile .card-information-account .content .list-information li .btn {
+          color: #0c3255; }
+          .profile .card-information-account .content .list-information li .btn span {
+            font-weight: 700; }
+  .profile .card-information-user {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 12px 6px rgba(12, 50, 85, 0.06);
+    box-shadow: 0 12px 6px rgba(12, 50, 85, 0.06);
+    margin-top: 16px;
+    border-radius: 8px;
+    overflow: hidden; }
+    .profile .card-information-user .content .content_head {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      background-color: #dbebfa;
+      padding: 4px 16px; }
+      .profile .card-information-user .content .content_head h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #0c3255; }
+        .profile .card-information-user .content .content_head h3 i {
+          margin-right: 8px; }
+      .profile .card-information-user .content .content_head .btn {
+        font-size: 12px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        padding: 0;
+        background-color: rgba(12, 50, 85, 0.3); }
+    .profile .card-information-user .content .list-information {
+      padding: 12px 14px; }
+      .profile .card-information-user .content .list-information li > i {
+        color: #858585;
+        float: left;
+        margin-right: 8px;
+        margin-top: 4px; }
+      .profile .card-information-user .content .list-information li > span {
+        display: block;
+        word-break: break-word; }
+        .profile .card-information-user .content .list-information li > span + span {
+          margin-top: 4px; }
+      .profile .card-information-user .content .list-information li + li {
+        margin-top: 8px; }
+  .profile .o_portal_docs li > a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .profile .o_portal_docs li + li {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #e0e0e0; }
+  .profile .o_portal_docs li span {
+    line-height: 24px; }
+    .profile .o_portal_docs li span.count {
+      border-radius: 8px;
+      color: #ffffff;
+      background-color: #0c3255;
+      padding: 0 12px; }
 
 .hvh-payment-complete {
   padding-top: 56px;

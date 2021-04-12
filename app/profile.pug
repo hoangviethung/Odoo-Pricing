@@ -1,5 +1,9 @@
-section.profile
-	.container
-		.row
-			.col-lg-4
-				
+extends views/_layouts/layout
+
+block var
+	- bodyClass = "profile-page"
+	- pageTitle = "Profile | Bemo"
+	- isHeaderInverted = false
+	- IsLogin = true
+block main
+	include ./views/_profile/body

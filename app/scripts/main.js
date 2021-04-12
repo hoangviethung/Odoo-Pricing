@@ -9,11 +9,14 @@ const fixedHeaderWhenScroll = () => {
 	}
 };
 
-const headerVerify = (isInverted) => {
+const headerVerify = (isInverted, isLogin) => {
 	if (isInverted == 'true') {
 		document
 			.querySelector('.hvh-main-header')
 			.classList.add('hvh-inverted');
+	}
+	if (isLogin == 'true') {
+		document.querySelector('.hvh-main-header').classList.add('logged');
 	}
 };
 
@@ -21,7 +24,9 @@ const pageVerify = () => {
 	const blockData = document.querySelector('#page-verify-template');
 	if (blockData) {
 		const isInverted = blockData.getAttribute('header-inverted');
-		headerVerify(isInverted);
+		const isLogin = blockData.getAttribute('is-login');
+		//ACTION
+		headerVerify(isInverted, isLogin);
 	}
 };
 

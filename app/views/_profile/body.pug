@@ -1,0 +1,61 @@
+section.profile
+	.container
+		.row
+			.col-lg-4
+				.left-wrapper
+					.card-information-account
+						.avatar
+							img.lazyload.blur-up.object-cover(src="https://i.pinimg.com/564x/0a/42/5f/0a425fe45daa9e245d82d33b25b57743.jpg", alt="")
+						.content
+							.content_head
+								h3.lcl.lcl-1
+									i.far.fa-user
+									span Thông tin tài khoản
+							.content_body
+								ul.list-information
+									li
+										i.far.fa-envelope
+										span noreply@odoo.com
+									li
+										i.far.fa-phone-alt
+										span (208) 555-0112
+									li
+										i.far.fa-map-marker
+										span VietNam
+									li
+										a.btn(href="#")
+											span Cài đặt
+											i.fas.fa-arrow-right
+					.card-information-user
+						.content
+							.content_head
+								h3.lcl.lcl-1
+									i.far.fa-id-card
+									span Thông tin tài khoản
+								a.btn.cl-white(href="#")
+									i.far.fa-pen
+							.content_body
+								ul.list-information
+									li
+										i.far.fa-user-circle
+										span Hoàng Việt Hùng
+									li
+										i.far.fa-envelope
+										span noreply@odoo.com
+									li
+										i.far.fa-phone-alt
+										span (208) 555-0112
+									li
+										i.far.fa-map-marker
+										span 66/12 Thich Quang Duc street, Phu Nhuan district, Ho Chi Minh city
+										span 166/12 Thich Quang Duc street, Phu Nhuan district, Ho Chi Minh city
+										span 84 Ho Chi Minh City Việt Nam
+			.col-lg-8
+				.right-wrapper
+					h3 Tài liệu
+					ul.o_portal_docs
+						-for(i=0;i<12;i++)
+							li
+								a(href="#") 
+									span.title Tiềm năng
+									span.count 9

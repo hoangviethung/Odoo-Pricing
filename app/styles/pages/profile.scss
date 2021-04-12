@@ -1,0 +1,159 @@
+.profile {
+	padding-top: $hvh-height-main-header;
+	background-color: $hvh-primary-blue-light-color-06;
+	padding-bottom: 56px;
+	.left-wrapper,
+	.right-wrapper {
+		background-color: $hvh-neutral-white-color;
+		margin-top: 32px;
+		padding: 16px;
+		border-radius: 8px;
+	}
+	.right-wrapper {
+		h3 {
+			font-size: 2.2rem;
+			color: $hvh-primary-color;
+			margin-bottom: 16px;
+		}
+	}
+	.card-information-account {
+		display: flex;
+		flex-wrap: wrap;
+		border-radius: 8px;
+		background-color: $hvh-neutral-white-color;
+		box-shadow: 0 12px 6px rgba($color: #0c3255, $alpha: 0.06);
+		height: 200px;
+		overflow: hidden;
+		.avatar {
+			-ms-flex: 0 0 40%;
+			flex: 0 0 40%;
+			max-width: 40%;
+			height: 100%;
+		}
+		.content {
+			-ms-flex-preferred-size: 0;
+			flex-basis: 0;
+			-ms-flex-positive: 1;
+			flex-grow: 1;
+			max-width: 100%;
+			.content_head {
+				background-color: $hvh-primary-blue-light-color-05;
+				padding: 4px 8px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				h3 {
+					font-size: 1.4rem;
+					font-weight: 700;
+					color: $hvh-primary-color;
+					i {
+						margin-right: 8px;
+					}
+				}
+			}
+			.list-information {
+				padding: 4px 8px;
+				font-size: 12px;
+				li {
+					> i {
+						color: $hvh-neutral-medium-sub-color;
+						float: left;
+						margin-right: 8px;
+						margin-top: 4px;
+					}
+					> span {
+						word-break: break-word;
+					}
+					+ li {
+						margin-top: 8px;
+					}
+					.btn {
+						color: $hvh-primary-color;
+						span {
+							font-weight: 700;
+						}
+					}
+				}
+			}
+		}
+	}
+	.card-information-user {
+		background-color: $hvh-neutral-white-color;
+		box-shadow: 0 12px 6px rgba($color: #0c3255, $alpha: 0.06);
+		margin-top: 16px;
+		border-radius: 8px;
+		overflow: hidden;
+		.content {
+			.content_head {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				background-color: $hvh-primary-blue-light-color-05;
+				padding: 4px 16px;
+				h3 {
+					font-size: 1.4rem;
+					font-weight: 700;
+					color: $hvh-primary-color;
+					i {
+						margin-right: 8px;
+					}
+				}
+				.btn {
+					font-size: 12px;
+					width: 22px;
+					height: 22px;
+					border-radius: 50%;
+					padding: 0;
+					background-color: rgba(
+						$color: $hvh-primary-color,
+						$alpha: 0.3
+					);
+				}
+			}
+			.list-information {
+				padding: 12px 14px;
+				li {
+					> i {
+						color: $hvh-neutral-medium-sub-color;
+						float: left;
+						margin-right: 8px;
+						margin-top: 4px;
+					}
+					> span {
+						display: block;
+						word-break: break-word;
+						+ span {
+							margin-top: 4px;
+						}
+					}
+					+ li {
+						margin-top: 8px;
+					}
+				}
+			}
+		}
+	}
+	.o_portal_docs {
+		li {
+			> a {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			+ li {
+				margin-top: 12px;
+				padding-top: 12px;
+				border-top: 1px solid $hvh-neutral-lighter-border-color;
+			}
+			span {
+				line-height: 24px;
+				&.count {
+					border-radius: 8px;
+					color: $hvh-neutral-white-color;
+					background-color: $hvh-primary-color;
+					padding: 0 12px;
+				}
+			}
+		}
+	}
+}

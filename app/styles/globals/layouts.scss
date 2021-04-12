@@ -47,6 +47,17 @@
 			}
 		}
 	}
+	&.logged {
+		.hvh-header-buttons {
+			> .btn-login {
+				display: none;
+			}
+		}
+		.account {
+			display: inline-flex;
+			align-items: center;
+		}
+	}
 }
 
 .hvh-main-header-main {
@@ -76,6 +87,26 @@
 	.btn {
 		+ .btn {
 			margin-left: 16px;
+		}
+	}
+	.account {
+		cursor: pointer;
+		display: none;
+		.avatar {
+			overflow: hidden;
+			margin-right: 8px;
+			img {
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+			}
+		}
+		.name {
+			user-select: none;
+			span {
+				color: $hvh-primary-color;
+				font-weight: 500;
+			}
 		}
 	}
 }
