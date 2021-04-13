@@ -1,0 +1,11 @@
+extends views/_layouts/layout
+
+block var
+	- bodyClass = "table-data-sale-orders-page"
+	- pageTitle = "Sale Orders | Bemo"
+	- isHeaderInverted = false
+	- IsLogin = true
+block main
+	section.table-data-wrapper
+		include ./views/_components/breadcrumb
+		include ./views/_table_data/sale-orders

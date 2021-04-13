@@ -178,6 +178,18 @@
 	color: $hvh-neutral-white-color;
 }
 
+.cl-success {
+	color: $hvh-semantic-positive-color;
+}
+
+.cl-information {
+	color: $hvh-semantic-information-color;
+}
+
+.cl-danger {
+	color: $hvh-semantic-danger-color;
+}
+
 .bg-primary-blue-light-5 {
 	background-color: $hvh-primary-blue-light-color-05;
 }
@@ -188,6 +200,34 @@
 
 .bg-primary {
 	background-color: $hvh-primary-color;
+}
+
+.bg-information {
+	background-color: $hvh-semantic-information-color;
+}
+
+.bg-information-lightest {
+	background-color: $hvh-semantic-information-lightest-color;
+}
+
+.bg-success {
+	background-color: $hvh-semantic-positive-color;
+}
+
+.bg-success-lightest {
+	background-color: $hvh-semantic-positive-lightest-color;
+}
+
+.bg-danger {
+	background-color: $hvh-semantic-negative-color;
+}
+
+.bg-danger-lightest {
+	background-color: $hvh-semantic-negative-lightest-color;
+}
+
+.bg-warning {
+	background-color: $hvh-semantic-critical-color;
 }
 
 .border-primary {

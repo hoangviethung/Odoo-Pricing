@@ -1,0 +1,38 @@
+section.table-data
+	.container
+		.block-table
+			table
+				thead
+					tr
+						th #Công nợ
+						th Ngày hóa đơn
+						th Ngày hết hạn
+						th Trạng thái
+						th Tình trạng hóa đơn
+						th.text-right Số tiền
+				tbody
+					-for(i=0;i<10;i++)
+						tr
+							td
+								a(href="bill-liabiliti-detail.html") SAAS/2021/11633A
+							td 01/23/2021
+							td 04/17/2020
+							td
+								span.bage.bg-success.cl-white Đã chi trả
+							td
+								span.bage.bg-success.cl-white Đã xuất
+							td.text-right
+								span 635 412
+								span đ
+						tr
+							td
+								a(href="#")  SAAS/2021/11633A
+							td 01/23/2021
+							td 04/17/2020
+							td
+								span.bage.bg-warning.cl-white Chưa chi trả
+							td
+								span.bage.bg-warning.cl-white Chưa xuất
+							td.text-right
+								span 635 412
+								span đ

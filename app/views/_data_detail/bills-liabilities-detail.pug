@@ -1,0 +1,118 @@
+section.data-detail
+	.container
+		.row
+			.col-lg-4
+				.card-data-detail-left
+					.card-head
+						h1 160.000
+							span VNĐ
+					.card-body
+						ul.list-nav
+							li.active
+								a(href="#")
+									i.far.fa-list-alt
+									span Đơn bán 
+									span SAAS/2021/11633A
+							li
+								a(href="#")
+									i.fas.fa-money-check-edit-alt
+									span Chi tiết giá
+							li
+								a(href="#")
+									i.far.fa-file-spreadsheet
+									span Các điều khoản thanh toán
+						.card-information-account
+							.avatar
+								img.lazyload.blur-up.object-cover(src="https://i.pinimg.com/564x/0a/42/5f/0a425fe45daa9e245d82d33b25b57743.jpg", alt="")
+							.content
+								ul.list-information
+									li
+										i.far.fa-envelope
+										span noreply@odoo.com
+									li
+										i.far.fa-phone-alt
+										span (208) 555-0112
+						.card-buttons-action
+							a.btn.btn-primary(href="profile.html")
+								span Đi tới trang của bạn
+								i.far.fa-arrow-right
+			.col-lg-8
+				.card-data-detail-right
+					.bills-liabilities-detail
+						h2 Đơn bán 
+							span SAAS/2021/11633A
+						.date-buy
+							b Ngày đặt hàng:
+								span  05/05/2020
+						.infor-client
+							b Địa chỉ xuất hóa đơn và địa chỉ giao hàng
+							ul
+								li 
+									i.far.fa-user-circle
+									span Hoàng Việt Hùng
+								li 
+									i.far.fa-map-marker
+									span 66/12 Thich Quang Duc street, Phu Nhuan district, Ho Chi Minh city
+						.invoice
+							.invoice-information
+								b Hóa đơn
+									a(href="#")  SAAS/2021/11633A 
+								p Ngày: 01/04/2021
+							.invoice-status.bg-information-lightest.cl-information
+								i.far.fa-check-circle
+								span Mới tạo
+							.invoice-status.bg-success-lightest.cl-success
+								i.far.fa-check-circle
+								span Đã chi trả
+							.invoice-status.bg-danger-lightest.cl-danger
+								i.far.fa-check-circle
+								span Chưa thanh toán
+						h2 Chi tiết giá
+						.table-data
+							.block-table
+								table
+									thead
+										tr
+											th.name-product Sản phẩm
+											th Số lượng
+											th.text-right Đơn giá
+											th.text-right Thuế
+											th.text-right Số tiền
+									tbody
+										-for(i=0;i<2;i++)
+											tr
+												td.name-product
+													a(href="bill-liabiliti-detail.html") [ks_inventory_dashboard] Inventory Dashboard Ninja by Ksolves India Pvt. Ltd. for version 13.0
+												td 1,00 PCE
+												td.text-right
+													span 835 470
+													span đ
+												td.text-right
+													span 0
+													span đ
+												td.text-right
+													span 835 470
+													span đ
+									tfoot
+										tr
+											td(colspan="2")
+											td.text-right Thành tiền
+											td.text-right(colspan="2")
+												span 835 470
+												span đ
+										tr
+											td(colspan="2")
+											td.text-right Thuế
+											td.text-right(colspan="2")
+												span 0
+												span đ
+										tr
+											td(colspan="2")
+											td.text-right Tổng tiền
+											td.text-right(colspan="2")
+												span 835 470
+												span đ
+						h2 Các điều khoản thanh toán
+						div.terms-of-payment
+							b Already paid 
+								span 21days
