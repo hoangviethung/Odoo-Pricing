@@ -245,4 +245,34 @@
 		display: inline-block;
 		margin-top: 16px;
 	}
+	.card-footer {
+		margin-top: 20px;
+		padding-top: 8px;
+		border-top: 1px solid $hvh-neutral-lighter-border-color;
+		.list-information {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-right: -8px;
+			margin-left: -8px;
+			li {
+				padding-left: 8px;
+				padding-right: 8px;
+				i {
+					color: $hvh-neutral-medium-sub-color;
+					margin-right: 8px;
+				}
+				span {
+					font-weight: 700;
+				}
+			}
+		}
+		.desc {
+			margin-top: 12px;
+			p {
+				text-align: center;
+				color: $hvh-neutral-medium-sub-color;
+			}
+		}
+	}
 }

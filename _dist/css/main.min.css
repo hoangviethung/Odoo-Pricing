@@ -14966,6 +14966,35 @@ template {
   display: inline-block;
   margin-top: 16px; }
 
+.invoice-detail .card-footer {
+  margin-top: 20px;
+  padding-top: 8px;
+  border-top: 1px solid #e0e0e0; }
+  .invoice-detail .card-footer .list-information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-left: -8px; }
+    .invoice-detail .card-footer .list-information li {
+      padding-left: 8px;
+      padding-right: 8px; }
+      .invoice-detail .card-footer .list-information li i {
+        color: #858585;
+        margin-right: 8px; }
+      .invoice-detail .card-footer .list-information li span {
+        font-weight: 700; }
+  .invoice-detail .card-footer .desc {
+    margin-top: 12px; }
+    .invoice-detail .card-footer .desc p {
+      text-align: center;
+      color: #858585; }
+
 .hvh-payment-complete {
   padding-top: 56px;
   padding-bottom: 24px;
