@@ -1,0 +1,11 @@
+extends views/_layouts/layout
+
+block var
+	- bodyClass = "sale-order-detail-page"
+	- pageTitle = "Sale Order Detail | Bemo"
+	- isHeaderInverted = false
+	- IsLogin = true
+block main
+	section.data-detail-wrapper
+		include ./views/_components/breadcrumb
+		include ./views/_data_detail/invoice-detail

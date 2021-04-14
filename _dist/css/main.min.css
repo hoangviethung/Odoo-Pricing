@@ -12825,7 +12825,7 @@ template {
   color: #0e6eef; }
 
 .cl-danger {
-  color: #0e6eef; }
+  color: #eb5757; }
 
 .bg-primary-blue-light-5 {
   background-color: #dbebfa; }
@@ -12850,6 +12850,9 @@ template {
 
 .bg-danger {
   background-color: #eb5757; }
+
+.bg-danger-lightest {
+  background-color: #fdeded; }
 
 .bg-warning {
   background-color: #ffc52f; }
@@ -14801,7 +14804,7 @@ template {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 16px;
+  padding: 16px;
   -webkit-box-shadow: 0 0 12px rgba(12, 50, 85, 0.06);
   box-shadow: 0 0 12px rgba(12, 50, 85, 0.06);
   border-radius: 8px;
@@ -14900,6 +14903,32 @@ template {
   margin-bottom: 0; }
   .bills-liabilities-detail .terms-of-payment b span {
     font-weight: 400; }
+
+.invoice-detail .company-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.invoice-detail .card-header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0; }
+
+.invoice-detail .company__content {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-left: 24px; }
+  .invoice-detail .company__content h3 {
+    font-size: 1.4rem; }
+  .invoice-detail .company__content p {
+    color: #858585;
+    font-size: 1.2rem; }
 
 .hvh-payment-complete {
   padding-top: 56px;

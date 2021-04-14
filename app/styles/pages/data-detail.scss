@@ -63,7 +63,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		padding: 4px 16px;
+		padding: 16px;
 		box-shadow: 0 0 12px rgba($color: $hvh-primary-color, $alpha: 0.06);
 		border-radius: 8px;
 		margin-top: 16px;
@@ -176,6 +176,32 @@
 			span {
 				font-weight: 400;
 			}
+		}
+	}
+}
+
+.invoice-detail {
+	.company-information {
+		display: flex;
+		align-items: center;
+	}
+	.card-header {
+		padding-bottom: 16px;
+		border-bottom: 1px solid $hvh-neutral-lighter-border-color;
+	}
+	.company__content {
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		max-width: 100%;
+		padding-left: 24px;
+		h3 {
+			font-size: 1.4rem;
+		}
+		p {
+			color: $hvh-neutral-medium-sub-color;
+			font-size: 1.2rem;
 		}
 	}
 }
