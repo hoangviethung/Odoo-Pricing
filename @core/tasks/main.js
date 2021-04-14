@@ -16,7 +16,7 @@ import buffer from 'vinyl-buffer';
 import source from 'vinyl-source-stream';
 const terser = require('gulp-terser');
 
-export const cssTask = () => {
+export const cssMainTask = () => {
 	return new Promise((resolve, reject) => {
 		src(['./app/styles/**.scss', '!app/styles/_*.scss'])
 			.pipe(gulpif(!isProduction(), sourcemaps.init()))
@@ -47,7 +47,7 @@ export const cssTask = () => {
 	});
 };
 
-export const jsTask = () => {
+export const jsMainTask = () => {
 	return browserify({
 		basedir: '.',
 		entries: ['./app/scripts/main.js'],
@@ -84,4 +84,41 @@ export const jsTask = () => {
 		.pipe(dest('_dist/js'));
 };
 
-export const main = series(cssTask, jsTask);
+export const jsHeaderTask = () => {
+	return browserify({
+		basedir: '.',
+		entries: ['./app/scripts/header.js'],
+		debug: true,
+		sourceMaps: true,
+	})
+		.transform(
+			babelify.configure({
+				presets: ['@babel/preset-env'],
+				plugins: [
+					'@babel/plugin-proposal-class-properties',
+					'@babel/plugin-transform-async-to-generator',
+				],
+				extensions: ['.js'],
+			}),
+		)
+		.bundle()
+		.pipe(source('header.js'))
+		.pipe(buffer())
+		.pipe(
+			plumber(function (err) {
+				console.log(err);
+				this.emit('end');
+			}),
+		)
+		.pipe(gulpif(!isProduction(), sourcemaps.init({ loadMaps: true })))
+		.pipe(gulpif(isProduction(), terser()))
+		.pipe(
+			rename({
+				suffix: '.min',
+			}),
+		)
+		.pipe(gulpif(!isProduction(), sourcemaps.write('./')))
+		.pipe(dest('_dist/js'));
+};
+
+export const main = series(cssMainTask, jsMainTask, jsHeaderTask);

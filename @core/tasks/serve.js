@@ -4,7 +4,7 @@ import del from 'del';
 import compression from 'compression';
 import { copyFonts } from './copy';
 import { renderHTML } from './render';
-import { cssTask, jsTask } from './main';
+import { cssMainTask, jsMainTask, jsHeaderTask } from './main';
 import { jsCore, cssCore } from './core';
 
 const imageChangeTask = (path, stats) => {
@@ -36,14 +36,11 @@ export const serve = () => {
 		},
 		port: 8000,
 	});
-	watch('app/views/_**/**.pug').on(
-		'change',
-		(path, stats) => {
-			console.log(`Files changed: '${path}'`);
-			console.log(`Rendering: All templates`);
-			return renderHTML('./app/**.pug');
-		},
-	);
+	watch('app/views/_**/**.pug').on('change', (path, stats) => {
+		console.log(`Files changed: '${path}'`);
+		console.log(`Rendering: All templates`);
+		return renderHTML('./app/**.pug');
+	});
 
 	watch(['app/*.pug']).on('change', (path, stats) => {
 		console.log(`Files changed: '${path}'`);
@@ -95,14 +92,14 @@ export const serve = () => {
 		.on('unlink', imageRemoveTask)
 		.on('unlinkDir', imageRemoveTask);
 
-	watch(['./app/scripts/**/**.js'], series(jsTask));
+	watch(['./app/scripts/**/**.js'], series(jsMainTask, jsHeaderTask));
 
 	watch(
 		['app/styles/**/**.scss'],
 		{
 			delay: 500,
 		},
-		series(cssTask),
+		series(cssMainTask),
 	);
 
 	watch(

@@ -1,35 +1,5 @@
 import Tab from './libraries/tabs';
 
-const fixedHeaderWhenScroll = () => {
-	const header = document.querySelector('header');
-	if (window.pageYOffset > header.offsetHeight) {
-		header.classList.add('hvh-scrolled');
-	} else {
-		header.classList.remove('hvh-scrolled');
-	}
-};
-
-const headerVerify = (isInverted, isLogin) => {
-	if (isInverted == 'true') {
-		document
-			.querySelector('.hvh-main-header')
-			.classList.add('hvh-inverted');
-	}
-	if (isLogin == 'true') {
-		document.querySelector('.hvh-main-header').classList.add('logged');
-	}
-};
-
-const pageVerify = () => {
-	const blockData = document.querySelector('#page-verify-template');
-	if (blockData) {
-		const isInverted = blockData.getAttribute('header-inverted');
-		const isLogin = blockData.getAttribute('is-login');
-		//ACTION
-		headerVerify(isInverted, isLogin);
-	}
-};
-
 const setValueCustomerSegment = () => {
 	const wrapper = document.querySelector('.hvh-form-checkout');
 	if (wrapper) {
@@ -158,8 +128,6 @@ const validateFormLogin = () => {
 };
 
 window.addEventListener('load', (e) => {
-	pageVerify();
-	fixedHeaderWhenScroll();
 	setValueCustomerSegment();
 	updateLinkActionFormCheckout();
 	let PricingBoard = new Tab('.hvh-pricing-board .tab-container');
@@ -168,8 +136,6 @@ window.addEventListener('load', (e) => {
 	validateFormLogin();
 });
 
-window.addEventListener('scroll', (e) => {
-	fixedHeaderWhenScroll();
-});
+window.addEventListener('scroll', (e) => {});
 
 window.addEventListener('resize', () => {});

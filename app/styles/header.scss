@@ -1,0 +1,143 @@
+@import 'abstracts/variables';
+
+.hvh-main-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: $hvh-neutral-darker-color;
+	background-color: rgba($color: $hvh-neutral-white-color, $alpha: 0.1);
+	z-index: 999;
+	transition: 0.3s all ease-in-out;
+	.hvh-main-header-main {
+		a {
+			&:not(.btn) {
+				color: inherit;
+			}
+			&.btn {
+				&:not(.btn-secondary) {
+					color: inherit;
+					transition: unset;
+				}
+			}
+		}
+	}
+	&.hvh-scrolled {
+		color: $hvh-neutral-darker-color;
+		background-color: $hvh-neutral-white-color;
+		box-shadow: $hvh-box-shadow;
+	}
+	&.hvh-inverted {
+		&:not(.hvh-scrolled) {
+			background-color: $hvh-primary-dark-color-02;
+			color: $hvh-neutral-white-color;
+			.hvh-logo-main-header {
+				img {
+					&.blur-up.lazyloaded {
+						filter: blur(0) brightness(0) invert(1);
+					}
+				}
+			}
+		}
+		&.hvh-scrolled {
+			.hvh-logo-main-header {
+				img {
+					&.blur-up.lazyloaded {
+						filter: blur(0);
+					}
+				}
+			}
+		}
+	}
+	&.logged {
+		.hvh-header-buttons {
+			> .btn-login {
+				display: none;
+			}
+		}
+		.account {
+			display: inline-flex;
+			align-items: center;
+		}
+	}
+}
+
+.hvh-main-header-main {
+	height: $hvh-height-main-header;
+}
+
+.hvh-logo-main-header {
+	display: inline-flex;
+	height: 100%;
+	float: left;
+	img {
+		height: 36px;
+		width: auto;
+		margin: auto 0;
+		transition: 0.3s all ease-in-out;
+		&.blur-up.lazyloaded {
+			filter: blur(0);
+		}
+	}
+}
+
+.hvh-header-buttons {
+	float: right;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	.btn {
+		+ .btn {
+			margin-left: 16px;
+		}
+	}
+	.account {
+		cursor: pointer;
+		display: none;
+		.avatar {
+			overflow: hidden;
+			margin-right: 8px;
+			img {
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+			}
+		}
+		.name {
+			user-select: none;
+			span {
+				color: $hvh-primary-color;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.hvh-primary-nav {
+	height: 100%;
+	ul {
+		height: 100%;
+		li {
+			display: inline-block;
+			&:first-child {
+				margin-left: 32px;
+			}
+			+ li {
+				margin-left: 24px;
+			}
+			> a {
+				line-height: $hvh-height-main-header;
+				&:not(.btn) {
+					font-weight: 600;
+				}
+			}
+			&.has-sub {
+				&:after {
+					content: '\f078';
+					font-family: $hvh-font-icons;
+					margin-left: 8px;
+				}
+			}
+		}
+	}
+}

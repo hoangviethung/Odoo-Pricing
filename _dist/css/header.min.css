@@ -1,0 +1,115 @@
+:root {
+  --hvh-font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol';
+  --hvh-font-icons: 'Font Awesome 5 Pro'; }
+
+.hvh-main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #373737;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 999;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out; }
+  .hvh-main-header .hvh-main-header-main a:not(.btn) {
+    color: inherit; }
+  .hvh-main-header .hvh-main-header-main a.btn:not(.btn-secondary) {
+    color: inherit;
+    -webkit-transition: unset;
+    transition: unset; }
+  .hvh-main-header.hvh-scrolled {
+    color: #373737;
+    background-color: #ffffff;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; }
+  .hvh-main-header.hvh-inverted:not(.hvh-scrolled) {
+    background-color: #081f36;
+    color: #ffffff; }
+    .hvh-main-header.hvh-inverted:not(.hvh-scrolled) .hvh-logo-main-header img.blur-up.lazyloaded {
+      -webkit-filter: blur(0) brightness(0) invert(1);
+      filter: blur(0) brightness(0) invert(1); }
+  .hvh-main-header.hvh-inverted.hvh-scrolled .hvh-logo-main-header img.blur-up.lazyloaded {
+    -webkit-filter: blur(0);
+    filter: blur(0); }
+  .hvh-main-header.logged .hvh-header-buttons > .btn-login {
+    display: none; }
+  .hvh-main-header.logged .account {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+
+.hvh-main-header-main {
+  height: 56px; }
+
+.hvh-logo-main-header {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  float: left; }
+  .hvh-logo-main-header img {
+    height: 36px;
+    width: auto;
+    margin: auto 0;
+    -webkit-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+    .hvh-logo-main-header img.blur-up.lazyloaded {
+      -webkit-filter: blur(0);
+      filter: blur(0); }
+
+.hvh-header-buttons {
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%; }
+  .hvh-header-buttons .btn + .btn {
+    margin-left: 16px; }
+  .hvh-header-buttons .account {
+    cursor: pointer;
+    display: none; }
+    .hvh-header-buttons .account .avatar {
+      overflow: hidden;
+      margin-right: 8px; }
+      .hvh-header-buttons .account .avatar img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%; }
+    .hvh-header-buttons .account .name {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .hvh-header-buttons .account .name span {
+        color: #0c3255;
+        font-weight: 500; }
+
+.hvh-primary-nav {
+  height: 100%; }
+  .hvh-primary-nav ul {
+    height: 100%; }
+    .hvh-primary-nav ul li {
+      display: inline-block; }
+      .hvh-primary-nav ul li:first-child {
+        margin-left: 32px; }
+      .hvh-primary-nav ul li + li {
+        margin-left: 24px; }
+      .hvh-primary-nav ul li > a {
+        line-height: 56px; }
+        .hvh-primary-nav ul li > a:not(.btn) {
+          font-weight: 600; }
+      .hvh-primary-nav ul li.has-sub:after {
+        content: '\f078';
+        font-family: "Font Awesome 5 Pro";
+        margin-left: 8px; }
+
+/*# sourceMappingURL=header.min.css.map */

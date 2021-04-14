@@ -1,0 +1,51 @@
+@import 'abstracts/variables';
+
+.hvh-main-footer {
+	position: relative;
+	padding: 24px 0;
+	background-color: $hvh-primary-color;
+	overflow: hidden;
+	&:after {
+		content: '';
+		position: absolute;
+		background-image: url(../images/bg-footer.svg);
+		width: 100%;
+		height: 70%;
+		left: 90%;
+		top: 50%;
+		transform: translateY(-50%);
+		background-size: contain;
+	}
+}
+
+.hvh-desc-footer {
+	color: $hvh-neutral-white-color;
+	+ .hvh-desc-footer {
+		margin-top: 4px;
+	}
+}
+
+.hvh-logo-main-footer {
+	display: inline-block;
+	margin-bottom: 32px;
+	img {
+		&.blur-up.lazyloaded {
+			filter: blur(0) brightness(0) invert(1);
+		}
+	}
+}
+
+.hvh-footer-title {
+	color: $hvh-neutral-white-color;
+	font-size: 1.8rem;
+}
+
+.hvh-footer-links {
+	color: $hvh-neutral-white-color;
+	margin: 8px 0 16px;
+	li {
+		+ li {
+			margin-top: 8px;
+		}
+	}
+}
