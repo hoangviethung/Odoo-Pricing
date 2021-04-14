@@ -14841,6 +14841,28 @@ template {
   -webkit-box-shadow: 0 0 12px rgba(12, 50, 85, 0.06);
   box-shadow: 0 0 12px rgba(12, 50, 85, 0.06); }
 
+.bills-liabilities-detail,
+.invoice-detail {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  max-width: 100%; }
+  .bills-liabilities-detail .table-data .block-table,
+  .invoice-detail .table-data .block-table {
+    padding: 0;
+    border: 1px solid #e0e0e0; }
+    .bills-liabilities-detail .table-data .block-table .name-product,
+    .invoice-detail .table-data .block-table .name-product {
+      width: 40%; }
+      .bills-liabilities-detail .table-data .block-table .name-product > a,
+      .invoice-detail .table-data .block-table .name-product > a {
+        font-weight: 400; }
+    .bills-liabilities-detail .table-data .block-table td.name-product > a,
+    .invoice-detail .table-data .block-table td.name-product > a {
+      color: #0e6eef; }
+
 .bills-liabilities-detail h2 {
   color: #081f36;
   font-size: 2.2rem;
@@ -14889,20 +14911,15 @@ template {
     .bills-liabilities-detail .invoice .invoice-status span {
       font-weight: 700; }
 
-.bills-liabilities-detail .table-data .block-table {
-  padding: 0;
-  border: 1px solid #e0e0e0; }
-  .bills-liabilities-detail .table-data .block-table .name-product {
-    width: 40%; }
-    .bills-liabilities-detail .table-data .block-table .name-product > a {
-      font-weight: 400; }
-  .bills-liabilities-detail .table-data .block-table td.name-product > a {
-    color: #0e6eef; }
-
 .bills-liabilities-detail .terms-of-payment {
   margin-bottom: 0; }
   .bills-liabilities-detail .terms-of-payment b span {
     font-weight: 400; }
+
+.invoice-detail h2 {
+  color: #081f36;
+  font-size: 2.2rem;
+  margin-bottom: 16px; }
 
 .invoice-detail .company-information {
   display: -webkit-box;
@@ -14929,6 +14946,25 @@ template {
   .invoice-detail .company__content p {
     color: #858585;
     font-size: 1.2rem; }
+
+.invoice-detail .card-body {
+  margin-top: 16px; }
+
+.invoice-detail .infor-client {
+  max-width: 50%;
+  margin-left: auto;
+  margin-bottom: 24px; }
+  .invoice-detail .infor-client ul li i {
+    margin-right: 8px; }
+  .invoice-detail .infor-client ul li + li {
+    margin-top: 8px; }
+
+.invoice-detail .table-normal-data table {
+  width: 100%; }
+
+.invoice-detail .note {
+  display: inline-block;
+  margin-top: 16px; }
 
 .hvh-payment-complete {
   padding-top: 56px;

@@ -97,6 +97,34 @@
 	box-shadow: 0 0 12px rgba($color: $hvh-primary-color, $alpha: 0.06);
 }
 
+.bills-liabilities-detail,
+.invoice-detail {
+	.table-data {
+		.block-table {
+			padding: 0;
+			border: 1px solid $hvh-neutral-lighter-border-color;
+			.name-product {
+				width: 40%;
+				> a {
+					font-weight: 400;
+				}
+			}
+			td {
+				&.name-product {
+					> a {
+						color: $hvh-semantic-information-color;
+					}
+				}
+			}
+		}
+	}
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	max-width: 100%;
+}
+
 .bills-liabilities-detail {
 	h2 {
 		color: $hvh-primary-dark-color-02;
@@ -151,25 +179,6 @@
 			}
 		}
 	}
-	.table-data {
-		.block-table {
-			padding: 0;
-			border: 1px solid $hvh-neutral-lighter-border-color;
-			.name-product {
-				width: 40%;
-				> a {
-					font-weight: 400;
-				}
-			}
-			td {
-				&.name-product {
-					> a {
-						color: $hvh-semantic-information-color;
-					}
-				}
-			}
-		}
-	}
 	.terms-of-payment {
 		margin-bottom: 0;
 		b {
@@ -181,6 +190,11 @@
 }
 
 .invoice-detail {
+	h2 {
+		color: $hvh-primary-dark-color-02;
+		font-size: 2.2rem;
+		margin-bottom: 16px;
+	}
 	.company-information {
 		display: flex;
 		align-items: center;
@@ -203,5 +217,32 @@
 			color: $hvh-neutral-medium-sub-color;
 			font-size: 1.2rem;
 		}
+	}
+	.card-body {
+		margin-top: 16px;
+	}
+	.infor-client {
+		max-width: 50%;
+		margin-left: auto;
+		margin-bottom: 24px;
+		ul {
+			li {
+				i {
+					margin-right: 8px;
+				}
+				+ li {
+					margin-top: 8px;
+				}
+			}
+		}
+	}
+	.table-normal-data {
+		table {
+			width: 100%;
+		}
+	}
+	.note {
+		display: inline-block;
+		margin-top: 16px;
 	}
 }
