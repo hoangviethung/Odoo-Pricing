@@ -2,10 +2,9 @@ extends views/_layouts/layout
 
 block var
 	- bodyClass = "pricing-page"
-	- pageTitle = "Bemo"
+	- pageTitle = "Bemo Pricing | Bemo"
 	- isHeaderInverted = true
 	- IsLogin = false
 block main
-	include ./views/_components/hero-banner
-	include ./views/_index/i-1
-	include ./views/_index/i-2
+	include ./views/_components/banner-title-page
+	include ./views/_pricing/body

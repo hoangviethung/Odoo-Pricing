@@ -1,0 +1,15 @@
+section.hero-banner
+	.swiper-container
+		.swiper-wrapper
+			-for(i=1;i<4;i++)
+				.swiper-slide
+					.item-slide
+						.img.overflow-hidden
+							img.object-cover.full-size(src=`./images/hero-banner/${i}.jpg`, alt="HERO-BANNER")
+						.content-wrapper
+							.container.h-100
+								.content
+									h3 Slide Title
+									p Use this snippet to presents your content in a slideshow-like format. Don't write about products or services here, write about solutions.
+									.action
+										a.btn.btn-bg-white.btn-lg(href="#") Call to action

@@ -1,3 +1,4 @@
+import Swiper from 'swiper';
 import Tab from './libraries/tabs';
 
 const setValueCustomerSegment = () => {
@@ -127,6 +128,27 @@ const validateFormLogin = () => {
 	}
 };
 
+const initHeroBanner = () => {
+	const heroBanner = new Swiper('.hero-banner .swiper-container', {});
+};
+
+const initializeWowJs = () => {
+	var wow = new WOW({
+		boxClass: 'wow', // animated element css class (default is wow)
+		animateClass: 'animated', // animation css class (default is animated)
+		offset: 0, // distance to the element when triggering the animation (default is 0)
+		mobile: true, // trigger animations on mobile devices (default is true)
+		live: true, // act on asynchronously loaded content (default is true)
+		callback: function (box) {
+			// the callback is fired every time an animation is started
+			// the argument that is passed in is the DOM node being animated
+		},
+		scrollContainer: null, // optional scroll container selector, otherwise use window,
+		resetAnimation: true, // reset animation on end (default is true)
+	});
+	wow.init();
+};
+
 window.addEventListener('load', (e) => {
 	setValueCustomerSegment();
 	updateLinkActionFormCheckout();
@@ -134,6 +156,8 @@ window.addEventListener('load', (e) => {
 	let FormCheckout = new Tab('.hvh-form-checkout .tab-container');
 	validateFormCheckout();
 	validateFormLogin();
+	initHeroBanner();
+	initializeWowJs();
 });
 
 window.addEventListener('scroll', (e) => {});

@@ -1,0 +1,18 @@
+section.home-news.pd-section
+	.container
+		h2.hvh-home-title.text-center.cl-primary Tin tức
+		ul.list-news
+			-for(i=1;i<6;i++)
+				li.item-news.wow.fadeInLeft(data-wow-delay=`${i*.2}s`)
+					.box-left
+						.block-wrapper
+							.img
+								img(src="./images/home-news/1.png", alt="home-news")
+							.content
+								h4 Team building
+								span 20 mins ago
+					.box-right
+						.block-wrapper
+							.content
+								h4 Register Team buiding June 2021
+								p.lcl.lcl-1 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient...
