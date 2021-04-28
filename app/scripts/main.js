@@ -30,7 +30,7 @@ const validateForm = (item) => {
 	if (type == 'text' || type == 'tel' || type == 'email') {
 		item.addEventListener('change', (e) => {
 			if (name == 'name') {
-				if (item.value.length >= 10) {
+				if (item.value.length >= 1) {
 					item.setAttribute('valid', true);
 				} else {
 					item.setAttribute('valid', false);
